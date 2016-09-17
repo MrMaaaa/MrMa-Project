@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Airship Fighting</title>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script src="../js/Mr_Ma_utils.js"></script>
+		<script src="../js/shape&draw.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/Airship_Fighting_main.css">
+		<script src="../js/Airship_Fighting_main.js"></script>
+	</head>
+	<body>
+		<div class="main clr">
+			<canvas id="myCanvas" width="600" height="600"></canvas>
+
+			<div id="start">
+				<input class="button" id="startButton" type="button" value="开始游戏">
+				<input class="button" id="introButton" type="button" value="游戏说明">
+			</div>
+
+			<div id="pause">
+				<input class="button" id="settingButton" type="button" value="游戏设置">
+				<input class="button" id="restartButton" type="button" value="重新开始">
+			</div>
+
+			<div id="gameInfo">
+				score: <span id="score"></span>
+			</div>
+
+			<div id="gameIntro">
+				<p>游戏通过W、S、A、D或↑、↓、←、→来控制方向，空格开火。</p>
+				<p>如果撞上敌人飞船或敌人飞船子弹则游戏结束（真tm简单），游戏中途通过按Esc键暂停，再次按该键返回游戏。</p>
+				<p>如果你不幸游戏结束了，别担心，1s后就会自动开始。（嘿嘿嘿）</p>
+				<p>后期会不断完善其他功能……</p>
+				<input class="button" id="gameIntro_backButton" type="button" value="返回">
+			</div>
+		</div>
+
+		<img class="airplane1_0" style="display:none;" src="../img/GameAirplane/airship1_0.png">
+		<img class="airplane1_1" style="display:none;" src="../img/GameAirplane/airship1_1.png">
+		<img class="enemyAirplane1" style="display:none;" src="../img/GameAirplane/enemyairship1.png">
+	</body>
+</html>

@@ -8,7 +8,15 @@
 	margin: 0;
 	padding: 0;
 }
-li {  list-style: none;  }
+
+a {  text-decoration: none;  }
+a:hover {  text-decoration: underline;  }
+
+li
+{
+	list-style: none;
+}
+
 .clr::before,
 .clr::after
 {
@@ -19,12 +27,14 @@ li {  list-style: none;  }
 	overflow: hidden;
 	visibility: hidden;
 }
-.main_center
+
+.center
 {
 	width: 1200px;
 	min-width: 1200px;
 	margin: 0 auto;
 }
+
 .full
 {
 	width: 100%;
@@ -48,6 +58,15 @@ header
 	top: 0;
 }
 
+.greet
+{
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	margin-left: 20px;
+}
+
 /*header end*/
 
 /*main*/
@@ -57,15 +76,74 @@ header
 	position: relative;
 	margin-top: 50px;
 }
+
+.main .bg
+{
+	position: relative;
+}
+
 .main .bg .bg_img
 {
 	display: block;
 	width: 100%;
 }
+
+.main .bg .bg_words
+{
+	width: 100%;
+	position: absolute;
+	bottom: 300px;
+	text-align: center;
+	font-size: 100px;
+	color: #fff;
+}
+
 .main .container
 {
-	height: 500px;
-	background: #ddd;
+	padding: 100px 0;
+}
+
+.main .container .title
+{
+	height: 70px;
+	line-height: 70px;
+	font-size: 30px;
+}
+
+.main .container .lists .list
+{
+	float: left;
+	display: block;
+	width: 30%;
+	height: 300px;
+	margin-right: 5%;
+	background: #aef0ff;
+	position: relative;
+}
+
+.main .container .lists .list:nth-child(3n + 3)
+{
+	margin-right: 0;
+}
+
+.main .container .lists .list .name
+{
+	display: block;
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5%;
+	color: #fff;
+	background: rgba(0, 0, 0, .7);
+	position: absolute;
+	bottom: 0;
+	transition: height .5s ease-in-out;
+}
+
+.main .container .lists .list:hover .name
+{
+	height: 90px;
+	transition: height .5s ease-in-out;
 }
 
 /*main end*/
