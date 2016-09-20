@@ -64,29 +64,17 @@
 				},
 				success: function(data)
 				{
-					/*for(var i = 0; i < data.data.forecast.length; i++)
-					 {
-					 document.write('日期：' + data.data.forecast[i].date + '<br>');
-					 document.write('风力：' + data.data.forecast[i].fengli + '<br>');
-					 document.write('风向：' + data.data.forecast[i].fengxiang + '<br>');
-					 document.write('最高温：' + data.data.forecast[i].high + '<br>');
-					 document.write('最低温：' + data.data.forecast[i].low + '<br>');
-					 document.write('天气：' + data.data.forecast[i].type + '<br>');
-					 document.write('<br>');
-					 }
-					 document.write('<br>');
-					 document.write('昨日天气情况：' + '<br>');
-					 document.write('日期：' + data.data.yesterday.date + '<br>');
-					 document.write('风力：' + data.data.yesterday.fl + '<br>');
-					 document.write('风向：' + data.data.yesterday.fx + '<br>');
-					 document.write('最高温：' + data.data.yesterday.high + '<br>');
-					 document.write('最低温：' + data.data.yesterday.low + '<br>');
-					 document.write('天气：' + data.data.yesterday.type + '<br>');*/
-
 					if(data.status == 1000)
 					{
+						var str = '';
+						//
+						for(var i = 1; i < data.data.forecast.length; i++)
+						{
+							str += data.data.forecast[i].date + data.data.forecast[i].low.substr(2, 5) + ' ~ ' + data.data.forecast[i].high.substr(2, 5) + '<br>';
+						}
+
 						$('#city_weather').html('天气情况：' + data.data.ganmao + '<br>温度：' + data.data.forecast[0].low.substr(2, 5) + ' ~ ' + data.data.forecast[0].high.substr(2, 5) +
-						'<br>' + data.data.forecast[1].date + data.data.forecast[1].low.substr(2, 5) + ' ~ ' + data.data.forecast[1].high.substr(2, 5));
+							'<br><br>未来天气情况：<br>' + str);
 					}
 					else if(data.status == 1002)
 					{
