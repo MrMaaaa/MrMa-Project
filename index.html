@@ -5,10 +5,16 @@
 		<title>Mr.Ma's first website. I have a dream to dreamed.</title>
 		<link rel="icon" type="image/x-icon" href="img/favicon.png">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="js/jquery-3.1.0.min.js"></script>
 	</head>
 	<body>
 		<header class="clr">
 			<h3 class="greet">Welcome to a newbie's home.</h3>
+
+			<div id="weather">
+				<span>今日天气：</span>
+				<a id="weather_info" href="html/weather.html" title="点此处查看更多天气信息"></a>
+			</div>
 		</header>
 
 		<div class="main full">
@@ -22,27 +28,25 @@
 				<div class="lists">
 					<ul class="clr">
 						<li class="list list1">
-							<a class="name" href="html/virtual_fountain.html">
-								虚拟喷泉
-								<br>
-								<span class="demo_intro">一个模拟现实喷泉的小实例，未来可能加上随机颜色等功能。。</span>
+							<a class="list_cover" href="html/virtual_fountain.html">
+								<div class="name">
+									虚拟喷泉
+									<br>
+									<span class="demo_intro">一个模拟现实喷泉的小实例，未来可能加上随机颜色等功能。。</span>
+								</div>
 							</a>
 						</li>
 
 						<li class="list list2">
-							<a class="name" href="html/Airship_Fighting%20V0.5.html">
-								飞鹰空击
-								<br>
-								<span class="demo_intro">驾驶一架炫(la)酷(ji)的飞船打败敌人吧，该游戏仍在测试中……</span>
+							<a class="list_cover" href="html/Airship_Fighting%20V0.5.html">
+								<div class="name">
+									飞鹰空击
+									<br>
+									<span class="demo_intro">驾驶一架炫(la)酷(ji)的飞船打败敌人吧，该游戏仍在测试中……</span>
+								</div>
 							</a>
 						</li>
 
-						<li class="list list3">
-							<a class="name" href="##">
-								<br>
-								<span class="demo_intro">暂无</span>
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -50,4 +54,5 @@
 
 		<footer class="full"></footer>
 	</body>
+	<script src="js/index.js"></script>
 </html>

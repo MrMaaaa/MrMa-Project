@@ -60,11 +60,26 @@ header
 
 .greet
 {
+	float: left;
 	width: 300px;
 	height: 50px;
 	line-height: 50px;
 	color: #fff;
 	margin-left: 20px;
+}
+
+#weather
+{
+	float: right;
+	width: 400px;
+	height: 50px;
+	line-height: 50px;
+	color: #c3ecff;
+}
+
+#weather_info
+{
+	color: #c3ecff;
 }
 
 /*header end*/
@@ -119,6 +134,7 @@ header
 	margin-right: 5%;
 	background: #aef0ff;
 	position: relative;
+	margin-bottom: 100px;
 }
 
 .main .container .lists .list:nth-child(3n + 3)
@@ -126,9 +142,20 @@ header
 	margin-right: 0;
 }
 
-.main .container .lists .list .name
+.main .container .lists .list .list_cover
 {
 	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.main .container .lists .list1 .list_cover
+{
+	background: url(../img/list1_cover.jpg);
+}
+
+.main .container .lists .list .name
+{
 	width: 90%;
 	height: 30px;
 	line-height: 30px;
@@ -144,6 +171,7 @@ header
 {
 	height: 90px;
 	transition: height .5s ease-in-out;
+	text-decoration: underline !important;
 }
 
 /*main end*/
