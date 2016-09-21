@@ -11,7 +11,7 @@
 					dataType: 'json',
 					success: function(data)
 					{
-						$('#weather_info').html(data.data.city + '&nbsp;&nbsp;&nbsp;' + data.data.forecast[0].low + '&nbsp;&nbsp;&nbsp;' + data.data.forecast[0].high);
+						$('#weather_info').html(data.data.city + '&nbsp;' + data.data.forecast[0].low + '&nbsp;' + data.data.forecast[0].high);
 
 					},
 					error: function()
