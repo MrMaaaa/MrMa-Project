@@ -8,12 +8,21 @@
 		<script src="js/jquery-3.1.0.min.js"></script>
 	</head>
 	<body>
-		<header class="clr">
+		<header class="full clr">
 			<h3 class="greet">Welcome to a newbie's home.</h3>
 
 			<div id="weather">
 				<span>今日天气：</span>
 				<a id="weather_info" href="html/weather.html" title="点此处查看更多天气信息"></a>
+				<a class="weather_question" href="javascript:void(null)">
+					显示有问题？
+					<div class="question_info">
+						<p>1. 检查是否网络连接正常。</p>
+						<p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
+						<p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，该脚本绝无不安全属性，请放心浏览。</p>
+					</div>
+				</a>
+
 			</div>
 		</header>
 
@@ -25,6 +34,7 @@
 
 			<div class="container center">
 				<p class="title">There are some demos.</p>
+
 				<div class="lists">
 					<ul class="clr">
 						<li class="list list1">
@@ -46,13 +56,14 @@
 								</div>
 							</a>
 						</li>
-
 					</ul>
 				</div>
 			</div>
 		</div>
 
-		<footer class="full"></footer>
+		<footer class="full">
+			<div class="temp">product by Mr.Ma and he is a lazy man.</div>
+		</footer>
 	</body>
 	<script src="js/index.js"></script>
 </html>
