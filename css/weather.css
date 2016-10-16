@@ -1,79 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*全局声明部分*/
-
-*
-{
-	margin: 0;
-	padding: 0;
-}
-
-a {  text-decoration: none;  }
-a:hover {  text-decoration: underline;  }
-
-li
-{
-	list-style: none;
-}
-
-.clr::before,
-.clr::after
-{
-	content: "";
-	display: block;
-	clear: both;
-	height: 0;
-	overflow: hidden;
-	visibility: hidden;
-}
-
-.center
-{
-	width: 1200px;
-	min-width: 1200px;
-	margin: 0 auto;
-}
-
-.full
-{
-	width: 100%;
-	min-width: 1200px;
-}
-
-*::selection
-{
-	background: #01b1ff;
-	color: #fff;
-}
-
-/*页面样式部分*/
-
-/*header*/
-
-header
-{
-	height: 50px;
-	background: #01b1ff;
-	box-shadow: 0 0 10px #fff;
-	z-index: 100;
-	position: fixed;
-	top: 0;
-}
-
-.greet
-{
-	float: left;
-	width: 300px;
-	height: 50px;
-	line-height: 50px;
-	color: #fff;
-	margin-left: 20px;
-}
-
-/*header end*/
-
-/*container*/
 
 .container
 {
@@ -86,12 +13,20 @@ header
 	display: block;
 	padding: 20px 0;
 	font-size: 20px;
+    padding-left: 20px;
+}
+
+.container .head .sup_intro
+{
+    font-size: 14px;
+    color: #aaa;
 }
 
 .city_sel
 {
 	float: left;
 	height: 500px;
+    margin-left: 20px;
 }
 
 .city_sel .sel_li
@@ -103,7 +38,7 @@ header
 	background: #cde9ee;
 }
 
-.city_sel .sel_li1
+.city_sel .sel_li10
 {
 	background: #3ac0ff;
 	color: #fff;
@@ -121,7 +56,7 @@ header
 .city_list
 {
 	float: left;
-	width: 1000px;
+	width: 980px;
 	height: 500px;
 	position: relative;
 }
@@ -133,13 +68,8 @@ header
 	height: 480px;
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	padding: 10px 50px;
-}
-
-#sel_li1_list
-{
-	display: block;
 }
 
 .city_list .sel_li_list .city_name
@@ -150,23 +80,75 @@ header
 	line-height: 40px;
 	padding: 0 15px;
 	background: #ddd;
-	margin: 0 10px;
+	margin: 0 8px;
 	margin-bottom: 20px;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 	cursor: pointer;
 }
 
+#sel_li10_list
+{
+    display: block;
+}
+
 #selected_city
 {
-	padding: 20px 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
 	font-size: 20px;
 }
 
 #city_weather
 {
 	height: 300px;
+    padding-left: 20px;
 	font-size: 20px;
 }
 
-/*container end*/
+@media only screen and (max-width: 640px)
+{
+    .container .head
+    {
+        padding: 20px;
+    }
+
+    .container .head .sup_intro
+    {
+        display: block;
+    }
+
+    .city_sel
+    {
+        width: 100%;
+        height: 180px;
+    }
+
+    .city_sel .sel_li
+    {
+        width: 16%;
+        margin: 10px 2%;
+        padding: 0;
+        float: left;
+        text-align: center;
+    }
+
+    .city_list,
+    .city_list .sel_li_list,
+    .city_list .sel_li_list > ul
+    {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        clear: both;
+    }
+
+    .city_list .sel_li_list .city_name
+    {
+        width: 16%;
+        margin: 20px 2%;
+    }
+}

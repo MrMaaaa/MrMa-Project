@@ -7,9 +7,9 @@
 (function()
 {
 	var
-		before_sel_li = $('.sel_li1'),
+		before_sel_li = $('.sel_li10'),
 		now_sel_li,
-		before_sel_city,
+		before_sel_city = $('.sel_li10_list'),
 		now_sel_city,
 		city = '';
 	$('.sel_li').each(function()
@@ -52,7 +52,7 @@
 			}
 
 			city = now_sel_city.text();
-			$('#selected_city').html('<strong>' + now_sel_city.text() + '</strong>天气情况如下：');
+			$('#selected_city').html('<strong>' + now_sel_city.text() + '</strong>天气情况：');
 
 			$.ajax
 			({
@@ -89,6 +89,8 @@
 
 		});
 	});
+
+    $('#default_city').click();
 
 })();
 

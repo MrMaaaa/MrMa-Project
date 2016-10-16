@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<title>Mr.Ma's first website. I have a dream to dreamed.</title>
 		<link rel="icon" type="image/x-icon" href="../img/favicon.png">
+		<link rel="stylesheet" href="../css/header&footer.css">
 		<link rel="stylesheet" type="text/css" href="../css/weather.css">
-		<script src="../js/jquery-3.1.0.min.js"></script>
 	</head>
 	<body>
 		<header class="full clr">
@@ -13,8 +13,9 @@
 		</header>
 
 		<div class="container center clr">
-			<span class="head">请选择城市：<span style="font-size: 14px; color: #aaa;">如果没有找到你所在的城市请发邮件到mtf986252757@gmail.com</span></span>
-			<div class="clr">
+			<span class="head">请选择城市：<abbr class="sup_intro">如果没有找到你所在的城市或有疑问请发邮件到mtf986252757@gmail.com</abbr></span>
+
+			<div class="weather_main clr">
 				<div class="city_sel">
 					<ul>
 						<li class="sel_li sel_li1">
@@ -60,18 +61,49 @@
 				</div>
 
 				<div class="city_list">
-					<ul class="clr">
-						<li>
-							<ul class="sel_li_list clr" id="sel_li1_list">
+					<ul>
+						<li class="sel_li_list clr" id="sel_li1_list">
+							<ul class="clr">
 								<li class="city_name">北京</li>
 								<li class="city_name">上海</li>
 								<li class="city_name">天津</li>
 								<li class="city_name">重庆</li>
+								<li class="city_name">台北</li>
+								<li class="city_name">香港</li>
+								<li class="city_name">澳门</li>
+                                <li class="city_name">长春</li>
+                                <li class="city_name">长沙</li>
+                                <li class="city_name">成都</li>
+                                <li class="city_name">福州</li>
+                                <li class="city_name">贵阳</li>
+                                <li class="city_name">广州</li>
+                                <li class="city_name">哈尔滨</li>
+                                <li class="city_name">海口</li>
+								<li class="city_name">杭州</li>
+                                <li class="city_name">呼和浩特</li>
+                                <li class="city_name">济南</li>
+                                <li class="city_name">昆明</li>
+                                <li class="city_name">拉萨</li>
+                                <li class="city_name">兰州</li>
+                                <li class="city_name">南昌</li>
+                                <li class="city_name">南京</li>
+                                <li class="city_name">南宁</li>
+                                <li class="city_name">沈阳</li>
+								<li class="city_name">深圳</li>
+                                <li class="city_name">石家庄</li>
+                                <li class="city_name">太原</li>
+                                <li class="city_name">武汉</li>
+                                <li class="city_name">乌鲁木齐</li>
+                                <li class="city_name">西安</li>
+                                <li class="city_name">西宁</li>
+								<li class="city_name">厦门</li>
+                                <li class="city_name">银川</li>
+								<li class="city_name">郑州</li>
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li2_list">
+						<li class="sel_li_list clr" id="sel_li2_list">
+							<ul class="clr">
 								<li class="city_name">阿坝</li>
 								<li class="city_name">阿勒泰</li>
 								<li class="city_name">阿里</li>
@@ -120,8 +152,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li3_list">
+						<li class="sel_li_list clr" id="sel_li3_list">
+							<ul class="clr">
 								<li class="city_name">大连</li>
 								<li class="city_name">大理</li>
 								<li class="city_name">丹东</li>
@@ -151,8 +183,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li4_list">
+						<li class="sel_li_list clr" id="sel_li4_list">
+							<ul class="=clr">
 								<li class="city_name">甘南</li>
 								<li class="city_name">赣州</li>
 								<li class="city_name">甘孜</li>
@@ -201,8 +233,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li5_list">
+						<li class="sel_li_list clr" id="sel_li5_list">
+							<ul class="clr">
 								<li class="city_name">佳木斯</li>
 								<li class="city_name">吉安</li>
 								<li class="city_name">江门</li>
@@ -233,8 +265,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li6_list">
+						<li class="sel_li_list clr" id="sel_li6_list">
+							<ul class="clr">
 								<li class="city_name">来宾</li>
 								<li class="city_name">莱芜</li>
 								<li class="city_name">兰州</li>
@@ -285,8 +317,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li7_list">
+						<li class="sel_li_list clr" id="sel_li7_list">
+							<ul class="clr">
 								<li class="city_name">盘锦</li>
 								<li class="city_name">攀枝花</li>
 								<li class="city_name">平顶山</li>
@@ -315,8 +347,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li8_list">
+						<li class="sel_li_list clr" id="sel_li8_list">
+							<ul class="clr">
 								<li class="city_name">三门峡</li>
 								<li class="city_name">三明</li>
 								<li class="city_name">三亚</li>
@@ -366,8 +398,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li9_list">
+						<li class="sel_li_list clr" id="sel_li9_list">
+							<ul class="clr">
 								<li class="city_name">万宁</li>
 								<li class="city_name">潍坊</li>
 								<li class="city_name">威海</li>
@@ -404,8 +436,8 @@
 							</ul>
 						</li>
 
-						<li>
-							<ul class="sel_li_list clr" id="sel_li10_list">
+						<li class="sel_li_list clr" id="sel_li10_list">
+							<ul class="clr">
 								<li class="city_name">雅安</li>
 								<li class="city_name">延安</li>
 								<li class="city_name">延边</li>
@@ -413,7 +445,7 @@
 								<li class="city_name">阳江</li>
 								<li class="city_name">阳泉</li>
 								<li class="city_name">扬州</li>
-								<li class="city_name">烟台</li>
+								<li class="city_name" id="default_city">烟台</li>
 								<li class="city_name">宜宾</li>
 								<li class="city_name">宜昌</li>
 								<li class="city_name">伊春</li>
@@ -457,9 +489,16 @@
 					</ul>
 				</div>
 			</div>
+
 			<p id="selected_city"></p>
+
 			<div id="city_weather"></div>
 		</div>
+
+        <footer class="full">
+            <span class="temp"><strong>马腾飞</strong>制作并维护，与他联系请发邮件到mtf986252757@gmail.com或986252757@qq.com</span>
+        </footer>
 	</body>
+    <script src="../js/jquery-3.1.0.min.js"></script>
 	<script src="../js/weather.js"></script>
 </html>

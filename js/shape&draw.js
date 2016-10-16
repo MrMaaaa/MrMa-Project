@@ -18,7 +18,7 @@ function Circle(x, y, radius, color, strokeColor, lineWidth, lineJoin, alpha, sc
 	this.lineJoin = lineJoin;
 	this.alpha = alpha;
 	this.context = undefined;
-//Circle.prototype.
+
 	this.Draw = function(drawType, context)
 	{
 		this.context = context || this.context;

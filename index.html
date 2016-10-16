@@ -4,24 +4,24 @@
 		<meta charset="UTF-8">
 		<title>Mr.Ma's first website. I have a dream to dreamed.</title>
 		<link rel="icon" type="image/x-icon" href="img/favicon.png">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script src="js/jquery-3.1.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/section_style.css">
+        <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 	<body>
 		<header class="full clr">
-			<h3 class="greet">Welcome to a newbie's home.</h3>
+			<strong class="greet">Welcome to a newbie's home.</strong>
 
 			<div id="weather">
 				<span>今日天气：</span>
 				<a id="weather_info" href="html/weather.html" target="_blank" title="点此处查看更多天气信息"></a>
-				<a class="weather_question" href="javascript:void(null)">
-					显示有问题？
-					<div class="question_info">
-						<p>1. 检查网络连接是否正常。</p>
-						<p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
-						<p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，该脚本绝无不安全属性，请放心浏览。</p>
-					</div>
-				</a>
+				<a class="weather_question" href="javascript:void(null)">显示有问题？</a>
+                <div class="question_info">
+                    <p>1. 检查网络连接是否正常。</p>
+                    <p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
+                    <p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，因此被某些浏览器阻止，允许阻止即可正常查看。</p>
+                    <a class="close" href="javascript:void(null)">X</a>
+                </div>
 			</div>
 		</header>
 
@@ -31,13 +31,15 @@
 				<h1 class="bg_words">Keep Coding.</h1>
 			</div>
 
-			<div class="websites center">
+			<div class="websites style-block center">
 				<p class="title">静态网页仿制</p>
 
 				<div class="lists">
 					<ul class="clr">
 						<li class="list list1">
-							<a class="list_cover" target="_blank" href="demos/QiongYou/qy.html">
+							<a class="list_cover" target="_blank" href="html/demos/QiongYou/qy.html">
+                                <img class="bg" src="img/QiongYou.jpg">
+
 								<div class="name">
 									穷游网
 									<br>
@@ -47,7 +49,9 @@
 						</li>
 
                         <li class="list list2">
-                            <a class="list_cover" target="_blank" href="demos/SinoTruk/SinoTruk.html">
+                            <a class="list_cover" target="_blank" href="html/demos/SinoTruk/SinoTruk.html">
+                                <img class="bg" src="img/SinoTruk.jpg">
+
                                 <div class="name">
                                     智慧重汽
                                     <br>
@@ -57,7 +61,9 @@
                         </li>
 
                         <li class="list list3">
-                            <a class="list_cover" target="_blank" href="demos/ShiFengCN/ShiFengCN.html">
+                            <a class="list_cover" target="_blank" href="html/demos/ShiFengCN/ShiFengCN.html">
+                                <img class="bg" src="img/ShiFengCN.jpg">
+
                                 <div class="name">
                                     时风集团
                                     <br>
@@ -69,13 +75,15 @@
 				</div>
 			</div>
 
-            <div class="hobby center">
+            <div class="hobbies style-block center">
                 <p class="title">个人作品</p>
 
                 <div class="lists">
                     <ul class="clr">
                         <li class="list list1">
-                            <a class="list_cover" target="_blank" href="demos/virtual_fountain/virtual_fountain.html">
+                            <a class="list_cover" target="_blank" href="html/demos/virtual_fountain/virtual_fountain.html">
+                                <img class="bg" src="img/virtual_fountain.jpg">
+
                                 <div class="name">
                                     虚拟喷泉
                                     <br>
@@ -85,12 +93,29 @@
                         </li>
 
                         <li class="list list2">
-                            <a class="list_cover" target="_blank" href="demos/Airship_Fighting/Airship_Fighting%20V0.5.html">
+                            <a class="list_cover" target="_blank" href="html/demos/Airship_Fighting/Airship_Fighting%20V0.5.html">
+                                <img class="bg" src="img/Airship_Fighting.jpg">
+
                                 <div class="name">
                                     飞鹰空击
                                     <br>
                                     <span class="demo_intro">驾驶一架炫(la)酷(ji)的飞船打败敌人吧，该游戏仍在测试中……</span>
                                 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+			<div class="articles style-inline center">
+                <p class="title">个人总结</p>
+
+                <div class="lists">
+                    <ul class="clr">
+                        <li class="list list1">
+                            <a class="list_content" target="_blank" href="html/articles/1.html">
+                                <span class="classify">【前端】</span>
+                                <span class="introduction">css备忘录</span>
                             </a>
                         </li>
                     </ul>
@@ -102,5 +127,6 @@
 			<span class="temp"><strong>马腾飞</strong>制作并维护，与他联系请发邮件到mtf986252757@gmail.com或986252757@qq.com</span>
 		</footer>
 	</body>
-	<script src="js/index.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/head_weather.js"></script>
 </html>
