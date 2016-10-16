@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*全局声明部分*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI, '黑体', 'Microsoft YaHei', monospace;
+}
+
+a {  text-decoration: none;  }
+a:hover {  text-decoration: underline;  }
+
+li
+{
+    list-style: none;
+}
+
+.clr::before,
+.clr::after
+{
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.center
+{
+    width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+
+.full
+{
+    width: 100%;
+    min-width: 1200px;
+}
+
+/*页面样式部分*/
+
+/*header*/
+
+header
+{
+    width: 100%;
+    height: 50px;
+    background: #01b1ff;
+    -webkit-box-shadow: 0 0 10px #fff;
+    -moz-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #fff;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+}
+
+header .greet
+{
+    float: left;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#weather
+{
+    float: right;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    color: #c3ecff;
+    position: relative;
+}
+
+#weather_info
+{
+    color: #c3ecff;
+}
+
+header .weather_question
+{
+    display: inline-block;
+    height: 50px;
+    font-size: 12px;
+    color: #a1dbff;
+    position: relative;
+}
+
+header #weather .question_info
+{
+    display: none;
+    width: 310px;
+    height: 200px;
+    line-height: 2em;
+    padding: 20px;
+    background: #01b1ff;
+    color: #fff;
+    /*-webkit-border-bottom-left-radius: 10px;*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /*-webkit-border-bottom-right-radius: 10px;*/
+    font-size: 16px;
+    -webkit-box-shadow: 0 4px 6px #fff;
+    -moz-box-shadow: 0 4px 6px #fff;
+    box-shadow: 0 4px 6px #fff;
+    position: relative;
+    top: -5px;
+    right: 0;
+    cursor: text;
+}
+
+header #weather .question_info .close
+{
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: #fff;
+}
+
+/*header end*/
+
+
+/* header mini */
+
+@media only screen and (max-width: 640px)
+{
+    .full,
+    .main,
+    .center
+    {
+        width: 100%;
+        min-width: 0;
+    }
+
+    header
+    {
+        height: auto;
+    }
+
+    #weather
+    {
+        position: static;
+        width: 90%;
+        height: auto;
+        padding: 0 5%;
+        line-height: 50px;
+    }
+}
+
+
+/* header mini end */
+
+
+/*footer*/
+
+footer
+{
+    height: 100px;
+    background: #333;
+    position: relative;
+}
+
+footer .temp
+{
+    display: block;
+    padding: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*footer end*/
