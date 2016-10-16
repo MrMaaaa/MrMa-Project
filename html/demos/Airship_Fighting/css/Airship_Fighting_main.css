@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+*
+{
+	padding: 0;
+	margin: 0;
+	font-family: Segoe UI, '黑体', 'Microsoft YaHei', monospace;
+}
+
+body, html
+{
+	width: 100%;
+	height: 100%;
+}
+
+body
+{
+	background: #000;
+}
+
+.clr::before,
+.clr::after
+{
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.main
+{
+	width: 600px;
+	height: 100%;
+	min-width: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.button
+{
+	width: 200px;
+	height: 50px;
+	display: block;
+	border: none;
+	border-radius: 5px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#myCanvas
+{
+	display: block;
+	float: left;
+	background: #222;
+	vertical-align: top;
+}
+
+#start
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	background: #00abff;
+}
+
+#startButton
+{
+	margin: 500px auto 0;
+	background: #0071ea;
+	color: #9be0ff;
+}
+
+#introButton
+{
+	margin: 50px auto 0;
+	background: #0071ea;
+	color: #9be0ff;
+}
+
+#pause
+{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	background: rgba(0, 0, 0, .5);
+}
+
+#settingButton
+{
+	margin: 200px auto 0;
+	background: #0071ea;
+	color: #9be0ff;
+}
+
+#restartButton
+{
+	margin: 100px auto 0;
+	background: #0071ea;
+	color: #9be0ff;
+}
+
+#gameInfo
+{
+	display: none;
+	width: 180px;
+	height: 100%;
+	position: absolute;
+	left: 100%;
+	color: white;
+	background: #000;
+	font-size: 18px;
+	padding: 0 10px;
+}
+
+#score
+{
+	display: block;
+	padding: 10px;
+	font-size: 20px;
+	text-shadow: 0 0 20px #fff;
+}
+
+#gameIntro
+{
+	display: none;
+	width: 90%;
+	height: 90%;
+	position: absolute;
+	z-index: 1;
+	background: #00abff;
+	padding: 5%;
+	font-size: 20px;
+	color: #fff;
+}
+
+#gameIntro_backButton
+{
+	margin: 500px auto 0;
+	background: #0071ea;
+	color: #9be0ff;
+}
