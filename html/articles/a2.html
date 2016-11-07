@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>【JS】js日记——滚动条的上上下下</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/article.css">
+    <link rel="stylesheet" type="text/css" href="../../css/icon-font/iconfont.css">
+    <style>
+        .container .content .a2_blk
+        {
+            width: 250px;
+            height: 160px;
+            padding: 10px;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            background-color: rgba(0, 0, 0, .4);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container .content .a2_bg
+        {
+            width: 0;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(255, 0, 0, .2);
+            top: 0;
+            left: 0;
+        }
+        .container .content .click_to_top_static,
+        .container .content .click_to_top_animate
+        {
+            background-color: #000;
+            color: #fff;
+            font-style: normal;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="full clr" id="header"></header>
+
+    <div class="container">
+        <div class="title">js日记——滚动条的上上下下</div>
+        <article class="content">
+            <p>今天做一个随滚动条滚动变化的效果。（语死早）</p>
+            <p>首先固定一个fixed的方块----------------------------></p>
+            <div class="a2_blk">
+                <div class="a2_bg"></div>
+                <p>我是小方块</p>
+                <p>距离顶部（jquery）：<span class="a2_topLength_jq">0</span></p>
+                <p>距离顶部（js1）：<span class="a2_topLength_js1">0</span></p>
+                <p>距离顶部（js2）：<span class="a2_topLength_js2">0</span></p>
+            </div>
+            <p>里边会显示滚动条距离顶部的距离</p>
+            <p>现在开始滚动就会动态显示滚动条距离顶部距离了~</p>
+            <p>除了chrome不支持js1的写法外其他写法均在chrome、firefox、ie9++上测试通过</p>
+            <p>js代码如下：</p>
+            <pre>
+                jq:  $(window).scrollTop();
+                js1: document.documentElement.scrollTop;
+                js2: window.pageYOffset;
+            </pre>
+            <br>
+            <br>
+            <p>知道这个属性就能轻易做出随滚动产生的动态效果了，你向下滚动屏幕再看看这个小方块。。。</p>
+            <p>是不是很容易~</p>
+            <br>
+            <p>到这里我仍然不能知足，能不能获取到元素距离body顶部的距离呢？</p>
+            <p>当然是可以的~</p>
+            <p>比如，元素小方块距离顶部距离是：<span class="a2_bodyLen">0</span></p>
+            <p>不信可以自己用截图工具试试（我写的top:30%所以没法用控制台看）</p>
+            <p>看到这，你肯定也学会了返回顶部的方法了吧？</p>
+            <br>
+            <br>
+            <p><i class="click_to_top_static">点击返回顶部</i></p>
+            <p><i class="click_to_top_animate">点击返回顶部（动画）</i></p>
+            <br>
+            <p href="javascript:void(null)">实现代码：</p>
+            <pre>
+                $('.click_to_top_static').on('click', function() {
+                    $(window).scrollTop(0);
+                });
+
+                $('.click_to_top_animate').on('click', function() {
+                    $('html, body').animate({'scrollTop': '0'}, 500);
+                });
+            </pre>
+            <br>
+            <p>注意：以上所有代码均在且只在ie9++上运行通过（其他现代浏览器自然可以运行）</p>
+            <br>
+            <p>完  :-)</p>
+            <br>
+        </article>
+    </div>
+
+    <footer class="full" id="footer"></footer>
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="../../js/head_weather.js"></script>
+<script>
+    $('#header').load('../header.html');
+    $('#footer').load('../footer.html');
+    $(function() {
+        var bottomLen = parseInt($(document).height() - $(window).height()); //滚动条一共能滚动的距离
+        $(window).on('scroll', function() {
+            $('.a2_topLength_jq').text(parseInt($(window).scrollTop()));
+            $('.a2_topLength_js1').text(parseInt(document.documentElement.scrollTop));
+            $('.a2_topLength_js2').text(parseInt(window.pageYOffset));
+            $('.container .content .a2_bg').css('width', parseInt(parseInt($('.a2_topLength_jq').text()) * 100 / bottomLen) + '%');
+        });
+
+        $('.a2_bodyLen').text($('.a2_blk')[0].offsetTop);
+
+        $('.click_to_top_static').on('click', function() {
+            $(window).scrollTop(0);
+        });
+
+        $('.click_to_top_animate').on('click', function() {
+            $('html, body').animate({
+                'scrollTop': '0'
+            }, 500);
+        });
+    });
+</script>
+</html>

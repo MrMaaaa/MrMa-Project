@@ -51,10 +51,10 @@ header
 {
     width: 100%;
     height: 50px;
-    background: #01b1ff;
-    -webkit-box-shadow: 0 0 10px #fff;
+    background: rgba(0, 0, 0, .5);
+    /* -webkit-box-shadow: 0 0 10px #fff;
     -moz-box-shadow: 0 0 10px #fff;
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #fff; */
     z-index: 100;
     position: fixed;
     top: 0;
@@ -68,7 +68,32 @@ header .greet
     line-height: 50px;
     color: #fff;
     margin-left: 20px;
-    font-size: 18px;
+    font-size: 20px;
+}
+
+header .greet a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav
+{
+    float: left;
+}
+
+header nav .nav_li
+{
+    float: left;
+    line-height: 50px;
+}
+
+header nav .nav_li a
+{
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 20px;
 }
 
 #weather
@@ -77,13 +102,14 @@ header .greet
     width: 400px;
     height: 50px;
     line-height: 50px;
-    color: #c3ecff;
+    color: #fff;
     position: relative;
+    font-size: 17px;
 }
 
 #weather_info
 {
-    color: #c3ecff;
+    color: #fff;
 }
 
 header .weather_question
@@ -91,7 +117,7 @@ header .weather_question
     display: inline-block;
     height: 50px;
     font-size: 12px;
-    color: #a1dbff;
+    color: #fff;
     position: relative;
 }
 
@@ -99,21 +125,14 @@ header #weather .question_info
 {
     display: none;
     width: 310px;
-    height: 200px;
+    height: auto;
     line-height: 2em;
     padding: 20px;
-    background: #01b1ff;
+    background: rgba(0, 0, 0, .5);
     color: #fff;
-    /*-webkit-border-bottom-left-radius: 10px;*/
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    /*-webkit-border-bottom-right-radius: 10px;*/
     font-size: 16px;
-    -webkit-box-shadow: 0 4px 6px #fff;
-    -moz-box-shadow: 0 4px 6px #fff;
-    box-shadow: 0 4px 6px #fff;
-    position: relative;
-    top: -5px;
+    position: absolute;
+    top: 100%;
     right: 0;
     cursor: text;
 }
@@ -125,10 +144,18 @@ header #weather .question_info .close
     height: 32px;
     line-height: 32px;
     text-align: center;
+    text-decoration: none;
     position: absolute;
     right: 5px;
     bottom: 5px;
     color: #fff;
+    transition: transform .3s ease;
+}
+
+header #weather .question_info .close:hover
+{
+    transform: rotate(180deg);
+    transition: transform .3s ease;
 }
 
 /*header end*/
@@ -169,7 +196,8 @@ header #weather .question_info .close
 
 footer
 {
-    height: 100px;
+    height: 40px;
+    line-height: 40px;
     background: #333;
     position: relative;
 }
@@ -177,9 +205,9 @@ footer
 footer .temp
 {
     display: block;
-    padding: 20px;
     color: #fff;
     font-size: 14px;
+    margin-left: 30px;
 }
 
 /*footer end*/

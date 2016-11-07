@@ -14,12 +14,34 @@
 	padding: 20px 0;
 	font-size: 20px;
     padding-left: 20px;
+    position: relative;
+}
+
+.container .head .slide_btn
+{
+    width: 150px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #02c39a;
+    color: #fff;
+    font-size: 18px;
 }
 
 .container .head .sup_intro
 {
     font-size: 14px;
     color: #aaa;
+}
+
+.container .weather_main
+{
+	position: absolute;
+    height: 0;
+    overflow: hidden;
+    background: #f6f6f6;
 }
 
 .city_sel
@@ -82,9 +104,11 @@
 	background: #ddd;
 	margin: 0 8px;
 	margin-bottom: 20px;
+    border-radius: 3px;
 	font-size: 18px;
 	text-align: center;
 	cursor: pointer;
+    color: #333;
 }
 
 #sel_li10_list
@@ -102,53 +126,12 @@
 
 #city_weather
 {
-	height: 300px;
     padding-left: 20px;
 	font-size: 20px;
 }
 
-@media only screen and (max-width: 640px)
+footer
 {
-    .container .head
-    {
-        padding: 20px;
-    }
-
-    .container .head .sup_intro
-    {
-        display: block;
-    }
-
-    .city_sel
-    {
-        width: 100%;
-        height: 180px;
-    }
-
-    .city_sel .sel_li
-    {
-        width: 16%;
-        margin: 10px 2%;
-        padding: 0;
-        float: left;
-        text-align: center;
-    }
-
-    .city_list,
-    .city_list .sel_li_list,
-    .city_list .sel_li_list > ul
-    {
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        clear: both;
-    }
-
-    .city_list .sel_li_list .city_name
-    {
-        width: 16%;
-        margin: 20px 2%;
-    }
+    position: fixed;
+    bottom: 0;
 }

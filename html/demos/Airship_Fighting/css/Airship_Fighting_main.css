@@ -32,9 +32,8 @@ body
 
 .main
 {
-	width: 600px;
+	width: 800px;
 	height: 100%;
-	min-width: 600px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -111,18 +110,18 @@ body
 	width: 180px;
 	height: 100%;
 	position: absolute;
-	left: 100%;
+	left: 600px;
 	color: white;
 	background: #000;
 	font-size: 18px;
 	padding: 0 10px;
 }
 
-#score
+#score,
+#highScore
 {
 	display: block;
-	padding: 10px;
-	font-size: 20px;
+	font-size: 22px;
 	text-shadow: 0 0 20px #fff;
 }
 
@@ -144,4 +143,12 @@ body
 	margin: 500px auto 0;
 	background: #0071ea;
 	color: #9be0ff;
+}
+
+#fps
+{
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	color: #fff;
 }

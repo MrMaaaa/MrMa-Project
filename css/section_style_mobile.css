@@ -1,18 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* 方块目录PC排版 */
+/* 方块目录手机排版 */
 .style-block
 {
+    width: 100%;
     padding: 100px 0;
 }
 
 .style-block .s_title
 {
-    height: 30px;
-    line-height: 30px;
-    font-size: 30px;
-    margin: 20px 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    width: 80%;
+    margin: 0 10% 7%;
     padding-left: 20px;
     border-left: 5px solid #00c9ff;
     color: #fff;
@@ -22,16 +24,12 @@
 {
     float: left;
     display: block;
-    width: 32%;
-    height: 300px;
-    margin-right: 2%;
+    width: 80%;
+    margin: 0 10%;
+    clear: both;
+    background: #aef0ff;
     position: relative;
     margin-bottom: 60px;
-}
-
-.style-block .s_lists .s_list:nth-child(3n + 3)
-{
-    margin-right: 0;
 }
 
 .style-block .s_lists .s_list .s_list_cover
@@ -39,8 +37,8 @@
     display: block;
     width: 100%;
     overflow: hidden;
-    background-color: #aef0ff;
     background-size: 100% 100%;
+    font-size: 40px;
 }
 
 .style-block .s_lists .s_list .s_list_cover .s_bg
@@ -52,14 +50,14 @@
 .style-block .s_lists .s_list .s_name
 {
     width: 100%;
-    height: 30px;
-    line-height: 30px;
+    height: 200px;
+    line-height: 100px;
     overflow: hidden;
     color: #fff;
     background: rgba(0, 0, 0, .7);
     position: absolute;
-    bottom: 0;
-    transition: height .3s ease-in-out;
+    bottom: 50px;
+    transition: height .5s ease-in-out;
 }
 
 .style-block .s_lists .s_list .s_name p
@@ -67,14 +65,7 @@
     padding: 0 5%;
 }
 
-.style-block .s_lists .s_list:hover .s_name
-{
-    height: 60px;
-    transition: height .3s ease-in-out;
-    text-decoration: underline !important;
-}
-
-/* 方块目录排版 end */
+/* 方块目录手机排版 end */
 
 
 /* 行级目录排版 */

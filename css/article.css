@@ -1,0 +1,145 @@
+
+
+::selection
+{
+    color: #fff;
+    background-color: #333;
+}
+
+::-moz-selection
+{
+    color: #fff;
+    background-color: #333;
+}
+
+@keyframes animateCloud
+{
+    0%
+    {
+        background-position: 0px 100%;
+    }
+
+    50%
+    {
+        background-position: 300px 100%;
+    }
+
+    100%
+    {
+        background-position: 600px 100%;
+    }
+}
+
+@-o-keyframes animateCloud
+{
+    0%
+    {
+        background-position: 0px 100%;
+    }
+
+    50%
+    {
+        background-position: 300px 100%;
+    }
+
+    100%
+    {
+        background-position: 600px 100%;
+    }
+}
+
+@-moz-keyframes animateCloud
+{
+    0%
+    {
+        background-position: 0px 100%;
+    }
+
+    50%
+    {
+        background-position: 300px 100%;
+    }
+
+    100%
+    {
+        background-position: 600px 100%;
+    }
+}
+
+
+@-webkit-keyframes animateCloud
+{
+    0%
+    {
+        background-position: 0px 100%;
+    }
+
+    50%
+    {
+        background-position: 300px 100%;
+    }
+
+    100%
+    {
+        background-position: 600px 100%;
+    }
+}
+
+body
+{
+    background-image: url(../img/cloud.png);
+    background-repeat: repeat-x;
+    background-size: 600px 100%;
+    background-attachment: fixed;
+    animation: animateCloud 20s linear infinite;
+}
+
+.container
+{
+    width: 1200px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+    box-shadow: 0 0 20px 6px #ddd;
+    background-color: #fff;
+    opacity: .7;
+}
+
+.container .title
+{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container .content
+{
+    line-height: 2em;
+    font-size: 20px;
+    padding: 0 30px;
+}
+
+.container .content pre
+{
+    font-family: "Consolas" !important;
+    line-height: 1.5em;
+    white-space: pre-wrap;/* pre标签会设置不换行，需手动修改 */
+}
+
+.container .content .highlight
+{
+    font-style: italic;
+    color: #f00;
+    margin: 0 5px;
+}
+
+.container .content .delete
+{
+    text-decoration: line-through;
+    color:#666;
+}
+
+.container .content .indent
+{
+    padding-left: 2em;
+}

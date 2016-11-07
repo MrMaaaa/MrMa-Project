@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>【前端】css备忘录</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/article.css">
+    <link rel="stylesheet" type="text/css" href="../../css/icon-font/iconfont.css">
+    <style>
+        .container .content .a1
+        {
+            display: block;
+            width: 260px;
+            height: 50px;
+            line-height: 50px;
+            border: 3px solid #000;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <header class="full clr" id="header"></header>
+
+    <div class="container">
+        <div class="title">CSS 备忘录</div>
+        <article class="content">
+            <p>学习前端中……</p>
+            <p>记录我容易忘记、遗漏的知识点</p>
+            <p>1. 将超出宽度的文字隐藏并使用“...”提示<p>
+            <p>效果如下：</p>
+            <p class="a1">一段测试文字一段测试文字一段测试文字</p>
+            <p>css代码为：</p>
+            <pre>
+                .demo1
+                {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            </pre>
+            <br>
+            <p>2. 解决因子元素设置float: left导致父元素（如果未设置高度）高度为0</p>
+            <p>css代码为：</p>
+            <pre>
+                .clr::before,
+                .clr::after
+                {
+                    content: "";
+                    display: block;
+                    clear: both;
+                    height: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                }
+            </pre>
+            <p>给需要清除浮动的元素加上类.clr即可</p>
+            <br>
+        </article>
+    </div>
+
+    <footer class="full" id="footer"></footer>
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="../../js/head_weather.js"></script>
+<script>
+    $('#header').load('../header.html');
+    $('#footer').load('../footer.html');
+</script>
+</html>

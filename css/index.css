@@ -1,62 +1,105 @@
-@charset "utf-8";
-/* CSS Document */
+*
+        {
+            padding: 0;
+            margin: 0;
+        }
 
-/*main*/
+        .clr::before,
+        .clr::after
+        {
+            content: '';
+            display: block;
+            width: 0;
+            clear: both;
+            visibility: hidden;
+        }
 
-.main
-{
-	position: relative;
-	margin-top: 50px;
-}
+        body
+        {
+            background-image: url(../img/bg-easter-egg.jpg);
+            background-color: #323A45;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-.main .bg
-{
-	position: relative;
-}
+        .title
+        {
+            width: 100%;
+            height: 100%;
+            perspective: 1000px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
 
-.main .bg .bg_img
-{
-	display: block;
-	width: 100%;
-}
+        .title .icon-fanhui
+        {
+            display: none;
+            position: absolute;
+            top: 100px;
+            left: 10%;
+            color: #fff;
+            font-size: 50px;
+        }
 
-.main .bg .bg_words
-{
-	width: 100%;
-	position: absolute;
-	bottom: 300px;
-	text-align: center;
-	font-size: 100px;
-	color: #fff;
-}
+        .title .icon-fanhui:hover
+        {
+            text-decoration: none;
+            color: #333;
+        }
 
-@media only screen and (max-width: 640px)
-{
-    .main
-    {
-        margin-top: 100px;
-    }
+        .title .title_list
+        {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
 
-    .main .bg .bg_img
-    {
-        display: none;
-    }
+        .title .title_list .tab_li
+        {
+            list-style: none;
+            float: left;
+            width: 25%;
+            height: 100%;
+            line-height: 11em;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            overflow: hidden;
+            animation: none;
+        }
 
-    .main .bg .bg_words
-    {
-        position: static;
-        padding-top: 2em;
-        font-size: 30px;
-        color: #01b1ff;
-    }
+        .title .title_list .tab_li .li_icon
+        {
+            display: block;
+            font-size: 80px;
+        }
 
-    .main .center
-    {
-        width: 100%;
-        min-width: 0;
-    }
+        .title .title_list .tab_li a
+        {
+            color: #fff;
+        }
 
+        .title .title_list .tab_li a:hover + .li_icon
+        {
+            transform: rotateY(360deg);
+            transition: transform 1s ease;
+        }
 
-}
+        .title .title_list .tab_li1 {  background-color: #EF476F;  }
+        .title .title_list .tab_li2 {  background-color: #FFD166;  }
+        .title .title_list .tab_li3 {  background-color: #06D6A0;  }
+        .title .title_list .tab_li4 {  background-color: #00DAE5;  }
 
-/*main end*/
+        .content
+        {
+            margin-top: 200px;
+        }
+
+        .content .content_lists .content_li
+        {
+            display: none;
+            width: 100%;
+            opacity: .9;
+        }

@@ -1,144 +1,159 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Mr.Ma's first website. I have a dream to dreamed.</title>
-		<link rel="icon" type="image/x-icon" href="img/favicon.png">
-        <link rel="stylesheet" type="text/css" href="css/section_style.css">
-        <link rel="stylesheet" type="text/css" href="css/header&footer.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-	</head>
-	<body>
-		<header class="full clr">
-			<strong class="greet">Welcome to a newbie's home.</strong>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>A dream to dream</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="css/icon-font/iconfont.css">
+    <script src="js/judgeDevice.js"></script>
+</head>
+<body>
+    <header class="full clr" id="header"></header>
 
-			<div id="weather">
-				<span>今日天气：</span>
-				<a id="weather_info" href="html/weather.html" target="_blank" title="点此处查看更多天气信息"></a>
-				<a class="weather_question" href="javascript:void(null)">显示有问题？</a>
-                <div class="question_info">
-                    <p>1. 检查网络连接是否正常。</p>
-                    <p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
-                    <p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，因此被某些浏览器阻止，允许阻止即可正常查看。</p>
-                    <a class="close" href="javascript:void(null)">X</a>
+    <div class="title">
+        <a class="iconfont icon-fanhui" href="javascript:void(null)"></a>
+        <ul class="title_list clr">
+            <li class="tab_li tab_li1">
+                <a href="javascript:void(null)">我是谁</a>
+
+                <i class="li_icon iconfont icon-geren"></i>
+            </li>
+
+            <li class="tab_li tab_li2">
+                <a href="javascript:void(null)">实验室？！</a>
+
+                <i class="li_icon iconfont icon-cube"></i>
+            </li>
+
+            <li class="tab_li tab_li3">
+                <a href="javascript:void(null)">展览馆</a>
+
+                <i class="li_icon iconfont icon-xiangmu"></i>
+            </li>
+
+            <li class="tab_li tab_li4">
+                <a href="javascript:void(null)">笔记本</a>
+
+                <i class="li_icon iconfont icon-biji-copy"></i>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <ul class="content_lists">
+            <li class="content_li">
+                <p style="width: 500px; text-align:center; margin: 100px auto 0; font-size: 40px; color: #fff; text-shadow: 0 10px 20px #ddd;">T_T没来及做，预计下周更新</p>
+            </li>
+
+            <li class="content_li">
+                <p style="width: 500px; text-align:center; margin: 100px auto 0; font-size: 40px; color: #fff; text-shadow: 0 10px 20px #ddd;">还没有内容，等待更新:-(</p>
+            </li>
+
+            <li class="content_li">
+                <div class="websites style-block center">
+                    <p class="s_title">静态网页仿制</p>
+
+                    <div class="s_lists">
+                        <ul class="clr">
+                            <li class="s_list list1">
+                                <a class="s_list_cover" target="_blank" href="html/demos/QiongYou/qy.html">
+                                    <img class="s_bg" src="img/QiongYou.jpg">
+
+                                    <div class="s_name">
+                                        <p>穷游网</p>
+                                        <p class="s_demo_intro">穷游静态页面制作……</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="s_list list2">
+                                <a class="s_list_cover" target="_blank" href="html/demos/SinoTruk/SinoTruk.html">
+                                    <img class="s_bg" src="img/SinoTruk.jpg">
+
+                                    <div class="s_name">
+                                        <p>智慧重汽</p>
+                                        <p class="s_demo_intro">智慧重汽静态页面制作……</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="s_list list3">
+                                <a class="s_list_cover" target="_blank" href="html/demos/ShiFengCN/ShiFengCN.html">
+                                    <img class="s_bg" src="img/ShiFengCN.jpg">
+
+                                    <div class="s_name">
+                                        <p>时风集团</p>
+                                        <p class="s_demo_intro">时风集团静态页面制作……</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-			</div>
-		</header>
 
-		<div class="main full">
-			<div class="bg full">
-				<img class="bg_img" src="img/bg.jpg">
-				<h1 class="bg_words">Keep Coding.</h1>
-			</div>
+                <div class="hobbies style-block center">
+                    <p class="s_title">雕虫小技</p>
+                    <div class="s_lists">
+                        <ul class="clr">
+                            <li class="s_list">
+                                <a class="s_list_cover" target="_blank" href="html/demos/virtual_fountain/virtual_fountain.html">
+                                    <img class="s_bg" src="img/virtual_fountain.jpg">
 
-			<div class="websites style-block center">
-				<p class="title">静态网页仿制</p>
+                                    <div class="s_name">
+                                        <p>虚拟喷泉</p>
+                                        <p class="s_demo_intro">一个模拟现实喷泉的小实例</p>
+                                    </div>
+                                </a>
+                            </li>
 
-				<div class="lists">
-					<ul class="clr">
-						<li class="list list1">
-							<a class="list_cover" target="_blank" href="html/demos/QiongYou/qy.html">
-                                <img class="bg" src="img/QiongYou.jpg">
+                            <li class="s_list">
+                                <a class="s_list_cover" target="_blank" href="html/demos/Airship_Fighting/Airship_Fighting%20V0.5.html">
+                                    <img class="s_bg" src="img/Airship_Fighting.jpg">
 
-								<div class="name">
-									穷游网
-									<br>
-									<span class="demo_intro">穷游静态页面制作……</span>
-								</div>
-							</a>
-						</li>
-
-                        <li class="list list2">
-                            <a class="list_cover" target="_blank" href="html/demos/SinoTruk/SinoTruk.html">
-                                <img class="bg" src="img/SinoTruk.jpg">
-
-                                <div class="name">
-                                    智慧重汽
-                                    <br>
-                                    <span class="demo_intro">智慧重汽静态页面制作……</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="list list3">
-                            <a class="list_cover" target="_blank" href="html/demos/ShiFengCN/ShiFengCN.html">
-                                <img class="bg" src="img/ShiFengCN.jpg">
-
-                                <div class="name">
-                                    时风集团
-                                    <br>
-                                    <span class="demo_intro">时风集团静态页面制作……</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="list list4">
-                            <a class="list_cover" target="_blank" href="html/demos/web_app_test/pc页面手机端样式.html">
-                                <!--<img class="bg" src="img/ShiFengCN.jpg">-->
-
-                                <div class="name">
-                                    app页面仿制
-                                    <br>
-                                    <span class="demo_intro">（测试）app页面仿制……</span>
-                                </div>
-                            </a>
-                        </li>
-					</ul>
-				</div>
-			</div>
-
-            <div class="hobbies style-block center">
-                <p class="title">个人作品</p>
-
-                <div class="lists">
-                    <ul class="clr">
-                        <li class="list list1">
-                            <a class="list_cover" target="_blank" href="html/demos/virtual_fountain/virtual_fountain.html">
-                                <img class="bg" src="img/virtual_fountain.jpg">
-
-                                <div class="name">
-                                    虚拟喷泉
-                                    <br>
-                                    <span class="demo_intro">一个模拟现实喷泉的小实例</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="list list2">
-                            <a class="list_cover" target="_blank" href="html/demos/Airship_Fighting/Airship_Fighting%20V0.5.html">
-                                <img class="bg" src="img/Airship_Fighting.jpg">
-
-                                <div class="name">
-                                    飞鹰空击
-                                    <br>
-                                    <span class="demo_intro">驾驶一架炫(la)酷(ji)的飞船打败敌人吧，该游戏仍在测试中……</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                                    <div class="s_name">
+                                        <p>飞鹰空击</p>
+                                        <p class="s_demo_intro">驾驶一架炫(la)酷(ji)的飞船打败敌人吧……</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </li>
 
-			<div class="articles style-inline center">
-                <p class="title">个人总结</p>
+            <li class="content_li">
+                <div class="articles style-inline center">
+                    <div class="s_lists">
+                        <ul class="clr">
+                            <li class="s_list">
+                                <a class="s_list_content" target="_blank" href="html/articles/a1.html">
+                                    <span class="s_classify">【CSS】</span>
+                                    <span class="s_introduction">css备忘录</span>
+                                </a>
+                            </li>
 
-                <div class="lists">
-                    <ul class="clr">
-                        <li class="list list1">
-                            <a class="list_content" target="_blank" href="html/articles/1.html">
-                                <span class="classify">【前端】</span>
-                                <span class="introduction">css备忘录</span>
-                            </a>
-                        </li>
-                    </ul>
+                            <li class="s_list">
+                                <a class="s_list_content" target="_blank" href="html/articles/a2.html">
+                                    <span class="s_classify">【JS】</span>
+                                    <span class="s_introduction">js日记——滚动条的上上下下</span>
+                                </a>
+                            </li>
+
+                            <li class="s_list">
+                                <a class="s_list_content" target="_blank" href="html/articles/a3.html">
+                                    <span class="s_classify">【JS】</span>
+                                    <span class="s_introduction">js日记——数组</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-		</div>
-
-		<footer class="full">
-			<span class="temp"><strong>马腾飞</strong>制作并维护，与他联系请发邮件到mtf986252757@gmail.com或986252757@qq.com</span>
-		</footer>
-	</body>
-    <script src="js/jquery-3.1.0.min.js"></script>
-	<script src="js/head_weather.js"></script>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/head_weather.js"></script>
 </html>

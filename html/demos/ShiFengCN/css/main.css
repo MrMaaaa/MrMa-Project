@@ -70,7 +70,7 @@ header .title .titleList > ul > li
 header .title .titleList ul li .downArrow
 {
     display: inline-block;
-    background: url(img/downarrow.png);
+    background: url(../img/downarrow.png);
     width: 8px;
     height: 8px;
     background-size: 100% 100%;
@@ -270,7 +270,7 @@ header .main .search ul li .glass
     display: block;
     width: 20px;
     height: 20px;
-    background: url(img/ico.png);
+    background: url(../img/ico.png);
     background-position: 0 0;
     margin-top: 34px;
 }
@@ -393,7 +393,7 @@ content .moveImg .LAImg
     width: 25px;
     height: 50px;
     position: absolute;
-    background: url(img/leftArrow.png);
+    background: url(../img/leftArrow.png);
     bottom: 30px;
     left: 370px;
     transition: all .3s;
@@ -409,7 +409,7 @@ content .moveImg .LRImg
     width: 25px;
     height: 50px;
     position: absolute;
-    background: url(img/rightArrow.png);
+    background: url(../img/rightArrow.png);
     bottom: 30px;
     left: 410px;
     transition: all .3s;
@@ -637,7 +637,7 @@ content .products .product_list .product_img:last-child
 }
 content .products .product_list .LAImg
 {
-    background: url(img/leftArrow2.png);
+    background: url(../img/leftArrow2.png);
     width: 40px;
     height: 80px;
     position: absolute;
@@ -654,7 +654,7 @@ content .products .product_list .LAImg:hover
 }
 content .products .product_list .LRImg
 {
-    background: url(img/rightArrow2.png);
+    background: url(../img/rightArrow2.png);
     width: 40px;
     height: 80px;
     position: absolute;
@@ -675,7 +675,7 @@ footer .footer_top
 {
     width: 100%;
     height: 274px;
-    background: url(img/f_t_bg.gif);
+    background: url(../img/f_t_bg.gif);
 }
 footer .footer_top .top_content
 {
@@ -827,7 +827,7 @@ footer .footer_bottom .bottom_content
 .fixed_aside ul .li_1
 {
     height: 72px;
-    background: url(img/right.png);
+    background: url(../img/right.png);
     background-position: 0 0;
     transition: all .3s;
 }
@@ -839,7 +839,7 @@ footer .footer_bottom .bottom_content
 .fixed_aside ul .li_2
 {
     height: 71px;
-    background: url(img/right.png);
+    background: url(../img/right.png);
     background-position: 0 -72px;
     transition: all .3s;
 }
@@ -851,7 +851,7 @@ footer .footer_bottom .bottom_content
 .fixed_aside ul .li_3
 {
     height: 70px;
-    background: url(img/right.png);
+    background: url(../img/right.png);
     background-position: 0 -143px;
     transition: all .3s;
 }
@@ -862,7 +862,7 @@ footer .footer_bottom .bottom_content
 }
 .fixed_aside ul .li_4
 {
-    background: url(img/right.png);
+    background: url(../img/right.png);
     background-position: 0 -213px;
     transition: all .3s;
     height: 43px;

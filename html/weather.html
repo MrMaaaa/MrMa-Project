@@ -2,22 +2,25 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Mr.Ma's first website. I have a dream to dreamed.</title>
+		<title>Mr.Ma's first website. I have a dream to dream.</title>
 		<link rel="icon" type="image/x-icon" href="../img/favicon.png">
 		<link rel="stylesheet" href="../css/header&footer.css">
-		<link rel="stylesheet" type="text/css" href="../css/weather.css">
+		<script src="../js/judgeDevice_weather.js"></script>
 	</head>
 	<body>
 		<header class="full clr">
-			<h3 class="greet">Welcome to a newbie's home.</h3>
+			<strong class="greet"><a href="../index.html" target="_blank">Yesterday you said tomorrow.</a></strong>
 		</header>
 
 		<div class="container center clr">
-			<span class="head">请选择城市：<abbr class="sup_intro">如果没有找到你所在的城市或有疑问请发邮件到mtf986252757@gmail.com</abbr></span>
+			<div class="head">
+				<input class="slide_btn" type="button" href="javascript:void(null)" value="更改城市">
+				<abbr class="sup_intro">如果没有找到你所在的城市或有疑问请发邮件到mtf986252757@gmail.com</abbr>
+			</div>
 
 			<div class="weather_main clr">
 				<div class="city_sel">
-					<ul>
+					<ul class="clr">
 						<li class="sel_li sel_li1">
 							<span class="city_title">热门城市</span>
 						</li>
@@ -61,7 +64,7 @@
 				</div>
 
 				<div class="city_list">
-					<ul>
+					<ul class="clr">
 						<li class="sel_li_list clr" id="sel_li1_list">
 							<ul class="clr">
 								<li class="city_name">北京</li>
@@ -495,10 +498,11 @@
 			<div id="city_weather"></div>
 		</div>
 
-        <footer class="full">
-            <span class="temp"><strong>马腾飞</strong>制作并维护，与他联系请发邮件到mtf986252757@gmail.com或986252757@qq.com</span>
-        </footer>
+        <footer class="full" id="footer"></footer>
 	</body>
     <script src="../js/jquery-3.1.0.min.js"></script>
 	<script src="../js/weather.js"></script>
+	<script>
+		$('#footer').load('../html/footer.html');
+	</script>
 </html>

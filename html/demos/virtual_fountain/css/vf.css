@@ -29,14 +29,10 @@
 
 #color,
 #colorOK,
-#randomColor
+#randomColor,
+#randomSingleColor
 {
     font-size: 16px;
-}
-
-#colorOK:hover
-{
-    cursor: pointer;
 }
 
 #randomColor
@@ -45,7 +41,16 @@
     margin-top: 10px;
 }
 
-#randomColor:hover
+#colorOK:hover,
+#randomColor:hover,
+#randomSingleColor
 {
     cursor: pointer;
+}
+
+#fps
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }

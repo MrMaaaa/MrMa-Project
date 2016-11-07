@@ -1,0 +1,634 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, header, nav, div, ul, li, a, footer,table, tr ,td
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Microsoft YaHei", monospace;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+li
+{  list-style: none;  }
+
+.clr::before
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clr::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.pc_width
+{
+    min-width: 1200px;
+}
+
+.center
+{
+    margin: 0 auto;
+}
+
+
+/* header */
+
+header
+{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background: #247BA0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo
+{
+    width: 230px;
+    height: 100%;
+    float: left;
+    background-image: url(../resume/img/logo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+header nav
+{
+    float: left;
+    margin-left: 50px;
+}
+
+header nav ul li
+{
+    height: 100%;
+    float: left;
+}
+
+header nav ul .nav_li a
+{
+    display: block;
+    height: 100%;
+    padding: 0 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+header nav ul .nav_li:first-child a
+{
+    color: #247ba0;
+    background: #fff;
+}
+
+/* header end */
+
+
+/* main */
+
+.main
+{
+    margin-top: 70px;
+}
+
+
+/* 小标题样式 */
+
+.main .title
+{
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: #fff;
+    line-height: 1em;
+    overflow: hidden;
+}
+
+.main .title .text
+{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+}
+
+.main .title .left_line
+{
+    display: inline-block;
+    width: 5px;
+    height: 36px;
+    background: #F25F5C;
+    vertical-align: middle;
+    transition: all .3s;
+    transition-delay: .2s;
+}
+
+.main .title:hover .left_line
+{
+    transform: translate(0, 50px);
+    transform-origin: 0 100%;
+    transition: all .3s;
+}
+
+.main .title .bottom_line
+{
+    width: 0;
+    height: 3px;
+    background: #F25F5C;
+    transition: all .3s;
+}
+
+.main .title:hover .bottom_line
+{
+    width: 95%;
+    transition: all .3s;
+    transition-delay: .2s;
+}
+
+/* 小标题样式 end */
+
+
+/* 个人简介部分 */
+
+.main .person_info
+{
+    width: 30%;
+    min-width: 360px;
+    height: 1000px;
+    background: #50514F;
+    float: left;
+    padding-top: 50px;
+}
+
+.main .person_info .pic
+{
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    background-image: url(../resume/img/pic.jpg);
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-position: 0 -10px;
+}
+
+.main .person_info .info
+{
+    width: 360px;
+    margin-top: 30px;
+}
+
+.main .person_info .info table
+{
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+}
+
+.main .person_info .info table tr
+{
+    height: 2em;
+}
+
+.main .person_info .info table .resume_list
+{
+    width: 200px;
+    padding-left: 25px;
+}
+
+.main .person_info .info table .resume_info
+{
+    width: 200px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.main .person_info .skill
+{
+    width: 360px;
+    margin-top: 30px;
+}
+
+.main .person_info .skill .left_line,
+.main .person_info .skill .bottom_line
+{
+    background: #FFE066;
+}
+
+.main .person_info .skill ul
+{
+
+    margin-top: 30px;
+}
+
+.main .person_info .skill .skill_li
+{
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    border: 5px solid #383937;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main .person_info .skill .skill_li::before
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top-color: #70C1B3;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transform: rotate(45deg);
+}
+
+
+.main .person_info .skill .skill_li1::after
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top-color: #70C1B3;
+    border-right-color: #70C1B3;
+    border-bottom-color: transparent;
+    border-left-color: #70C1B3;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transform: rotate(155deg);
+}
+
+.main .person_info .skill .skill_li2::after
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top-color: #70C1B3;
+    border-right-color: #70C1B3;
+    border-bottom-color: transparent;
+    border-left-color: #70C1B3;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transform: rotate(150deg);
+}
+
+.main .person_info .skill .skill_li3::after
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top-color: #70C1B3;
+    border-right-color: #70C1B3;
+    border-bottom-color: transparent;
+    border-left-color: #70C1B3;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transform: rotate(150deg);
+}
+
+.main .person_info .skill .skill_li4::after
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: #70C1B3;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transform: rotate(45deg);
+}
+
+.main .person_info .skill .skill_li5::after
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: #70C1B3;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.main .person_info .skill .skill_li6::after
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: #70C1B3;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transform: rotate(15deg);
+}
+
+.main .person_timeline
+{
+    width: 70%;
+    min-width: 780px;
+    height: 1050px;
+    float: left;
+    position: relative;
+}
+
+.main .person_timeline .leaf_l .tree_line,
+.main .person_timeline .leaf_r .tree_line
+{
+    height: 2px;
+    background: #808080;
+    margin-top: 5px;
+    width: 0;
+    position: absolute;
+}
+
+.main .person_timeline .leaf_l .tree_line
+{
+    right: 0;
+}
+
+.main .person_timeline .leaf_r .tree_line
+{
+    left: 0;
+}
+
+.main .person_timeline .main_tree
+{
+    width: 4px;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -2px;
+    background: #808080;
+}
+
+.main .person_timeline .leaf_l
+{
+    display: block;
+    width: 400px;
+    padding: 10px 0;
+    position: absolute;
+    right: 50%;
+    color: #50514F;
+}
+
+.main .person_timeline .leaf_l .tree_root
+{
+    display: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FFE066;
+    position: absolute;
+    bottom: -4px;
+    right: -8px;
+    z-index: 5;
+}
+
+.main .person_timeline .leaf_l .year
+{
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 30px;
+    color: #F25F5C;
+}
+
+.main .person_timeline .leaf_l .content
+{
+    display: none;
+    position: absolute;
+    top: -10px;
+}
+
+.main .person_timeline .leaf_r
+{
+    display: block;
+    width: 400px;
+    padding: 10px 0;
+    position: absolute;
+    left: 50%;
+    text-align: right;
+    color: #50514F;
+}
+
+.main .person_timeline .leaf_r .tree_root
+{
+    display: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FFE066;
+    position: absolute;
+    bottom: -4px;
+    left: -8px;
+    z-index: 5;
+}
+
+
+.main .person_timeline .leaf_r .year
+{
+    display: none;
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    font-size: 30px;
+    color: #F25F5C;
+}
+
+.main .person_timeline .leaf_r .content
+{
+    display: none;
+    position: absolute;
+    width: 300px;
+    top: -10px;
+    right: 0;
+}
+
+#leaf1
+{
+    top: 100px;
+}
+
+#leaf2
+{
+    top: 350px;
+}
+
+#leaf3
+{
+    top: 450px;
+}
+
+#leaf4
+{
+    top: 550px;
+}
+
+#leaf5
+{
+    top: 650px;
+}
+
+/* 个人简介部分 end */
+
+
+/* 作品展示部分 */
+
+#production
+{
+    width: 1600px;
+    height: 550px;
+    margin-top: 150px;
+    padding-top: 100px;
+}
+
+#production .production_li
+{
+    float: left;
+    width: 360px;
+    height: 300px;
+    background: red;
+    box-shadow: 0 10px 20px #ddd;
+    margin-right: 40px;
+    margin-bottom: 120px;
+}
+
+#production .production_li:hover
+{
+    box-shadow: 0 10px 20px #aaa;
+}
+
+#production .production_li > a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#production .production_li .production_title
+{
+    width: 92%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8%;
+    position: absolute;
+    bottom: 20px;
+    background: rgb(0, 120, 81);
+    font-size: 18px;
+    color: #fff;
+}
+
+#production .production_li1 .production_title
+{
+    background: rgba(0, 120, 81, .7);
+    color: #fff;
+}
+
+#production .production_li2 .production_title
+{
+    background: rgba(0, 117, 121, .7);
+    color: #fff;
+}
+
+#production .production_li3 .production_title
+{
+    background: rgba(236, 43, 38, .7);
+    color: #fff;
+}
+
+#production .production_li4 .production_title
+{
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+#production .production_li5 .production_title
+{
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+}
+
+/* 作品展示部分 end */
+
+
+/* 说说自己部分 */
+
+#myself
+{
+    width: 100%;
+    height: 1200px;
+    margin-top: 150px;
+}
+
+/* 说说自己部分 end */
+
+
+/* main end */
