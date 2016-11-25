@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>【JS】js日记——数组</title>
+    <title>【JS】js日记——滚动条的上上下下</title>
     <link rel="icon" type="image/x-icon" href="../../img/favicon.png">
     <link rel="stylesheet" type="text/css" href="../../css/header&footer.css">
     <link rel="stylesheet" type="text/css" href="../../css/article.css">
     <link rel="stylesheet" type="text/css" href="../../css/icon-font/iconfont.css">
     <style>
-        .container .content .demo1_blk
+        .container .content .a2_blk
         {
             width: 250px;
             height: 160px;
@@ -21,7 +21,7 @@
             overflow: hidden;
         }
 
-        .container .content .demo1_bg
+        .container .content .a2_bg
         {
             width: 0;
             height: 100%;
@@ -42,122 +42,89 @@
     </style>
 </head>
 <body>
-<header class="full clr" id="header"></header>
+    <header class="full clr" id="header"></header>
 
-<div class="container">
-    <div class="title">js日记——数组</div>
-    <article class="content">
-        <p>数组是一个非常常用的对象，JavaScript中内置了许多方法用来操作数组，在此记下，以便查阅。</p>
-        <p>先声明一个数组arr：<span class="a3_arr"></span></p>
-        <p><span class="highlight">arr.length;</span>输出数组长度</p>
-        <p>arr的长度为：<span class="a3_len"></span></p>
-        <br>
-        <p><span class="highlight">arr.join(data);</span>将数组转为字符串，每个元素之间以data作为分隔符，<span class="highlight">不直接操作原数组</span></p>
-        <p>将arr以‘-’连接：<span class="a3_join"></span></p>
-        <br>
-        <p><span class="highlight">arr.concat(data);</span>将data插入数组末尾，data为数组时自动遍历整个data数组，并不会将data插入原数组，<span class="highlight">不直接操作原数组</span></p>
-        <p>将数组['d', 'e']插入arr：<span class="a3_concat"></span></p>
-        <br>
-        <p><span class="highlight">arr.push(data);</span>将data插入arr末尾，<span class="highlight">直接操作原数组</span></p>
-        <p>将字符串‘d’插入arr末尾：<span class="a3_push"></span></p>
-        <br>
-        <p><span class="highlight">arr.pop();</span>删除arr的最后一个元素，<span class="highlight">直接操作原数组</span></p>
-        <p>删除arr的最后一个元素：<span class="a3_pop"></span></p>
-        <br>
-        <p><span class="highlight">arr.unshift(data);</span>在arr的第一位之前插入元素data，<span class="highlight">直接操作原数组</span></p>
-        <p>在arr首位之前插入字符‘n’：<span class="a3_unshift"></span></p>
-        <br>
-        <p><span class="highlight">arr.shift();</span>删除arr的第一个元素，<span class="highlight">直接操作原数组</span></p>
-        <p>删除arr的第一个元素：<span class="a3_shift"></span></p>
-        <br>
-        <p><span class="highlight">arr.reverse();</span>将arr中的元素倒序排列，<span class="highlight">直接操作原数组</span></p>
-        <p>arr倒序：<span class="a3_reverse"></span></p>
-        <br>
-        <p><span class="highlight">arr.sort(null | function);</span>将arr中的元素进行排序，如果传入函数则按照函数返回值进行排序，<span class="highlight">直接操作原数组</span></p>
-        <p>注意：这个sort在进行两位数排序时会出现问题，因此一般都自己写函数进行排序。</p>
-        <p>sort自定义函数排序函数格式为：</p>
-        <pre>
-            arr.sort(function(a, b) {
-                return a - b;//b - a按从大到输出
-            });
-        </pre>
-        <p>arr排序（默认）：<span class="a3_sort"></span></p>
-        <p>arr排序（自定义）：排序之前：15,18,10&nbsp;&nbsp;排序之后：<span class="a3_sort1"></span></p>
-        <br>
-        <p><span class="highlight">arr.slice(start | start, end);</span>当传入一个参数时返回元素下标大于等于start的元素组成的数组；当传入两个参数时返回元素下标大于等于start且小于end的元素组成的数组，<span class="highlight">不直接操作原数组</span></p>
-        <p>arr.slice(1)：<span class="a3_slice1"></span></p>
-        <p>arr.slice(1, 2)：<span class="a3_slice2"></span></p>
-        <br>
-        <p><span class="highlight">arr.splice(start, len | start, len, data);</span>当传入两个参数时删除元素下标大于等于start的len个元素组成的数组；当传入三个参数时删除元素下标大于等于start且小于end的元素组成的数组，并将data添加到删除位置，<span class="highlight">直接操作原数组</span></p>
-        <p>arr.splice(0, 1)：<span class="a3_splice1"></span></p>
-        <p>arr.splice(0, 0, 'z')：<span class="a3_splice2"></span></p>
-        <br>
-        <br>
-        <p>完 :-)</p>
-        <div style="margin-top: 100px;">
-            <p>临时内容：</p>
-            <p>utf-8字符转为中文：</p>
-            <input id="translateStr" type="text" placeholder="string"><button id="trnaslate" type="button">确定</button>
-            <p id="translated"></p>
-        </div>
-        <br>
-    </article>
-</div>
+    <div class="container">
+        <div class="title">js日记——滚动条的上上下下</div>
+        
+        <article class="content">
+            <p>今天做一个随滚动条滚动变化的效果。（语死早）</p>
+            <p>首先固定一个fixed的方块----------------------------></p>
+            <div class="a2_blk">
+                <div class="a2_bg"></div>
+                <p>我是小方块</p>
+                <p>距离顶部（jquery）：<span class="a2_topLength_jq">0</span></p>
+                <p>距离顶部（js1）：<span class="a2_topLength_js1">0</span></p>
+                <p>距离顶部（js2）：<span class="a2_topLength_js2">0</span></p>
+            </div>
+            <p>里边会显示滚动条距离顶部的距离</p>
+            <p>现在开始滚动就会动态显示滚动条距离顶部距离了~</p>
+            <p>除了chrome不支持js1的写法外其他写法均在chrome、firefox、ie9++上测试通过</p>
+            <p>js代码如下：</p>
+            <pre>
+                jq:  $(window).scrollTop();
+                js1: document.documentElement.scrollTop;
+                js2: window.pageYOffset;
+            </pre>
+            <br>
+            <br>
+            <p>知道这个属性就能轻易做出随滚动产生的动态效果了，你向下滚动屏幕再看看这个小方块。。。</p>
+            <p>是不是很容易~</p>
+            <br>
+            <p>到这里我仍然不能知足，能不能获取到元素距离body顶部的距离呢？</p>
+            <p>当然是可以的~</p>
+            <p>比如，元素小方块距离顶部距离是：<span class="a2_bodyLen">0</span></p>
+            <p>不信可以自己用截图工具试试（我写的top:30%所以没法用控制台看）</p>
+            <p>看到这，你肯定也学会了返回顶部的方法了吧？</p>
+            <br>
+            <br>
+            <p><i class="click_to_top_static">点击返回顶部</i></p>
+            <p><i class="click_to_top_animate">点击返回顶部（动画）</i></p>
+            <br>
+            <p href="javascript:void(null)">实现代码：</p>
+            <pre>
+                $('.click_to_top_static').on('click', function() {
+                    $(window).scrollTop(0);
+                });
 
-<footer class="full" id="footer"></footer>
+                $('.click_to_top_animate').on('click', function() {
+                    $('html, body').animate({'scrollTop': '0'}, 500);
+                });
+            </pre>
+            <br>
+            <p>注意：以上所有代码均在且只在ie9++上运行通过（其他现代浏览器自然可以运行）</p>
+            <br>
+            <p>完  :-)</p>
+            <br>
+        </article>
+    </div>
+
+    <footer class="full" id="footer"></footer>
 </body>
 <script src="../../js/jquery-3.1.0.min.js"></script>
 <script src="../../js/head_weather.js"></script>
 <script>
     $('#header').load('../header.html');
     $('#footer').load('../footer.html');
-
     $(function() {
-        var arr = ['a', 'b', 'c'];
+        var bottomLen = parseInt($(document).height() - $(window).height()); //滚动条一共能滚动的距离
+        $(window).on('scroll', function() {
+            $('.a2_topLength_jq').text(parseInt($(window).scrollTop()));
+            $('.a2_topLength_js1').text(parseInt(document.documentElement.scrollTop));
+            $('.a2_topLength_js2').text(parseInt(window.pageYOffset));
+            $('.container .content .a2_bg').css('width', parseInt(parseInt($('.a2_topLength_jq').text()) * 100 / bottomLen) + '%');
+        });
 
-        $('.a3_arr').text(arr);
+        $('.a2_bodyLen').text($('.a2_blk')[0].offsetTop);
 
-        $('.a3_len').text(arr.length);
+        $('.click_to_top_static').on('click', function() {
+            $(window).scrollTop(0);
+        });
 
-        $('.a3_join').text(arr.join('-'));
-
-        $('.a3_concat').text(arr.concat(['d', 'e']));
-
-        arr.push('d');
-        $('.a3_push').text(arr);
-
-        arr.pop();
-        $('.a3_pop').text(arr);
-
-        arr.unshift('n');
-        $('.a3_unshift').text(arr);
-
-        arr.shift();
-        $('.a3_shift').text(arr);
-
-        arr.reverse();
-        $('.a3_reverse').text(arr);
-
-        arr.sort();
-        $('.a3_sort').text(arr);
-        $('.a3_sort1').text([15, 18, 10].sort(function(a, b) {
-            return a - b;
-        }));
-
-        var s1 = arr.slice(1);
-        var s2 = arr.slice(1, 2);
-        $('.a3_slice1').text(s1);
-        $('.a3_slice2').text(s2);
-
-        arr.splice(0, 1);
-        $('.a3_splice1').text(arr);
-
-        arr.splice(0, 0, 'z');
-        $('.a3_splice2').text(arr);
-
-        $('#trnaslate').click(function() {
-            $('#translated').text(decodeURI($('#translateStr').val().toString()));
-            //中文转utf-8：encodeURI(str);
+        $('.click_to_top_animate').on('click', function() {
+            $('html, body').animate({
+                'scrollTop': '0'
+            }, 500);
         });
     });
 </script>

@@ -14,6 +14,7 @@
     visibility: hidden;
 }
 
+.center,
 .full
 {
     width: 100%;
@@ -22,9 +23,8 @@
 
 header
 {
-    height: 80px;
-    line-height: 80px;
-    font-size: 30px;
+    height: 60px;
+    line-height: 60px;
 }
 
 header .greet
@@ -34,8 +34,12 @@ header .greet
 
 header .weather_question
 {
-    height: 80px;
-    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
 }
 
 header #weather .question_info
@@ -45,10 +49,11 @@ header #weather .question_info
 
 #weather
 {
-    width: 70%;
-    height: 80px;
-    padding-left: 30%;
-    line-height: 80px;font-size: 30px;
+    width: 80%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20%;
+    font-size: 25px;
 }
 
 body
@@ -99,21 +104,31 @@ body
     list-style: none;
     width: 100%;
     height: 25%;
-    line-height: 4em;
+    vertical-align: middle;
     text-align: center;
     font-size: 70px;
     color: #fff;
     overflow: hidden;
     animation: none;
-    box-shadow: 0 0 20px 6px #222;
+    box-shadow: 0 1px 30px 3px #222;
+    /* 使用flex属性实现垂直居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+}
+
+.title .title_list .tab_li a,
+.title .title_list .tab_li .li_icon
+{
+    display: inline-block;
+    font-size: 50px;
 }
 
 .title .title_list .tab_li .li_icon
 {
-    display: block;
-    height: 0;
-    font-size: 100px;
-    margin-top: -1.4em;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
 .title .title_list .tab_li a
@@ -137,4 +152,16 @@ body
     display: none;
     width: 100%;
     opacity: .9;
+}
+
+footer
+{
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+}
+
+footer .temp
+{
+    font-size: 30px;
 }

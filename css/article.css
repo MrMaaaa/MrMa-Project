@@ -119,11 +119,20 @@ body
     padding: 0 30px;
 }
 
-.container .content pre
+.container .content pre,
+.container .content code
 {
+    margin: 0;
+    padding: 10px 0;
     font-family: "Consolas" !important;
     line-height: 1.5em;
     white-space: pre-wrap;/* pre标签会设置不换行，需手动修改 */
+}
+
+.container .content .list_title
+{
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .container .content .highlight
@@ -139,7 +148,12 @@ body
     color:#666;
 }
 
-.container .content .indent
+.container .content .retract
 {
     padding-left: 2em;
+}
+
+.container .content .indent
+{
+    text-indent: 2em;
 }

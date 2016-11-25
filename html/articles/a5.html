@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>【Windows】BUG与DEBUG</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/article.css">
+    <link rel="stylesheet" type="text/css" href="../../css/icon-font/iconfont.css">
+</head>
+<body>
+<header class="full clr" id="header"></header>
+
+<div class="container">
+    <div class="title">BUG与DEBUG</div>
+
+    <article class="content">
+        <p>这里都是我碰到的一些问题<s class="delete">（和解决方法）</s>，不一定与互联网相关，在此记下，防止再次掉进坑。</p>
+        <br>
+        <p class="list_title">1. 安装软件/游戏时出现2502/2503错误：</p>
+        <section class="indent">
+            <p>这个错误往往是由于权限不足引起的，解决方法有两个。</p>
+            <br>
+            <p>方法一：</p>
+            <section class="indent">
+                <p>右键左下角开始键，打开“命令提示符（管理员）”</p>
+                <p>输入msiexec /package D:/XX/XX</p>
+                <p>后面跟的是安装软件的路径名，无需写后缀名</p>
+                <p>但这种方法治标不治本，一劳永逸还是直接修改管理员权限~</p>
+            </section>
+            <p>方法二：</p>
+            <section class="indent">
+                <p>打开系统盘，进入用户/administrator文件夹</p>
+                <p>右击属于自己电脑标识的文件夹（。。。）</p>
+                <p>点击“安全”标签页，选择当前登录用户，点击“编辑”，在下方权限窗口中勾上“完全控制”与“修改”，点击“应用”确认修改。</p>
+            </section>
+            <br>
+            <p>现在便不再出现这个错误了。</p>
+        </section>
+        <br>
+        <p>2. FAT16/FAT32转NTFS格式：</p>
+        <p class="indent">Ctrl + R 打开“运行”窗口，输入“cmd”进入控制台，在控制台中输入“convert X:/fs:ntfs”（将“X”改为对应盘符），即可进行转换。</p>
+        <br>
+    </article>
+</div>
+
+<footer class="full" id="footer"></footer>
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="../../js/head_weather.js"></script>
+<script>
+    $('#header').load('../header.html');
+    $('#footer').load('../footer.html');
+</script>
+</html>

@@ -22,6 +22,29 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+
+        .section_3 .group
+        {
+            width: 500px;
+            height: 600px;
+            border: 1px
+            solid #000;
+        }
+
+        .section_3 .parent
+        {
+            width: 100%;
+            height: 400px;
+            background-color: #f00;
+        }
+
+        .section_3 .child
+        {
+            width: 100%;
+            height: 200px;
+            background-color: #0f0;
+            margin-top: 200px;
+        }
     </style>
 </head>
 <body>
@@ -29,38 +52,86 @@
 
     <div class="container">
         <div class="title">CSS 备忘录</div>
+
         <article class="content">
             <p>学习前端中……</p>
             <p>记录我容易忘记、遗漏的知识点</p>
-            <p>1. 将超出宽度的文字隐藏并使用“...”提示<p>
-            <p>效果如下：</p>
-            <p class="a1">一段测试文字一段测试文字一段测试文字</p>
-            <p>css代码为：</p>
-            <pre>
-                .demo1
-                {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-            </pre>
-            <br>
-            <p>2. 解决因子元素设置float: left导致父元素（如果未设置高度）高度为0</p>
-            <p>css代码为：</p>
-            <pre>
-                .clr::before,
-                .clr::after
-                {
-                    content: "";
-                    display: block;
-                    clear: both;
-                    height: 0;
-                    overflow: hidden;
-                    visibility: hidden;
-                }
-            </pre>
-            <p>给需要清除浮动的元素加上类.clr即可</p>
-            <br>
+            <p class="list_title">1. 将超出宽度的文字隐藏并使用“...”提示<p>
+            <div class="section_1 retract">
+                <p>效果如下：</p>
+                <p class="a1">一段测试文字一段测试文字一段测试文字</p>
+                <p>css代码为：</p>
+                <pre>
+                    .demo1
+                    {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                </pre>
+                <br>
+            </div>
+
+            <p class="list_title">2. 解决因子元素设置float: left导致父元素（如果未设置高度）高度为0</p>
+            <div class="section_2 retract">
+                <p>css代码为：</p>
+                <pre>
+                    .clr::before,
+                    .clr::after
+                    {
+                        content: "";
+                        display: block;
+                        clear: both;
+                        height: 0;
+                        overflow: hidden;
+                        visibility: hidden;
+                    }
+                </pre>
+                <p>给需要清除浮动的元素加上类.clr即可</p>
+                <br>
+            </div>
+
+            <p class="list_title">3. 解决元素内部第一个子元素设置margin-top导致该元素应用设置问题</p>
+            <div class="section_3 retract">
+                <p>在给一个元素的第一个子元素设置margin-top值时，会发现是父元素应用了该样式，好像这句设置发生了转移一样。如下图所示：</p>
+                <div class="group">
+                    <div class="parent">
+                        <div class="child"></div>
+                    </div>
+                </div>
+
+                <pre class="classCode">
+                    样式代码如下：
+                    .group
+                    {
+                        width: 500px;
+                        height: 600px;
+                        border: 1px
+                        solid #000;
+                    }
+                    .parent
+                    {
+                        width: 100%;
+                        height: 400px;
+                        background-color: #f00;
+                    }
+                    .child
+                    {
+                        width: 100%;
+                        height: 200px;
+                        background-color: #0f0;
+                        margin-top: 200px;
+                    }
+                </pre>
+
+                <p>原本是想让绿色的子元素距离红色的父元素顶部200px，结果这个样式却是父元素应用了。</p>
+                <p>解决方案如下：</p>
+                <p class="retract">给父元素加上样式"overflow: hidden"即可。</p>
+                <p class="retract"><button class="btnAddClass" type="button">点击查看效果</button></p>
+                <p>这样就可以正常显示样式了。</p>
+                <br>
+                <br>
+            </div>
         </article>
     </div>
 
@@ -71,5 +142,9 @@
 <script>
     $('#header').load('../header.html');
     $('#footer').load('../footer.html');
+
+    $('.section_3 button.btnAddClass').click(function() {
+        $('.section_3 .group .parent').css('overflow', 'hidden');
+    });
 </script>
 </html>

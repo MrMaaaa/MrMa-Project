@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>MusicPlayer</title>
+    <link rel="stylesheet" type="text/css" href="../lab/MusicPlayer/musicPlayer.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon-font/iconfont.css">
+</head>
+<body>
+    <div id="_musicPlayer">
+        <div id="_musicCtrl">
+            <span id="_musicName"></span>
+
+            <div class="_time">
+                <span id="_nowTime">--:--</span>
+                /
+                <span id="_ttlTime">--:--</span>
+            </div>
+
+            <div id="_progress">
+                <i class="iconfont" id="_progressBar"></i>
+                <i id="_progressLine"></i>
+            </div>
+
+            <div class="ctrlGroup">
+                <i class="iconfont icon-shangyiqu" id="_prev"></i>
+                <i class="iconfont icon-bofang" id="_play"></i>
+                <i class="iconfont icon-zanting" id="_pause"></i>
+                <i class="iconfont icon-xiayiqu" id="_next"></i>
+            </div>
+        </div>
+
+        <div id="_musicLists">
+            <ul>
+                <li class="_musicLi active"><a href="javascript: void(null)">Annabelle</a></li>
+                <li class="_musicLi"><a href="javascript: void(null)">CanonRock</a></li>
+                <li class="_musicLi"><a href="javascript: void(null)">Fade</a></li>
+                <li class="_musicLi"><a href="javascript: void(null)">FreeLoop</a></li>
+                <li class="_musicLi"><a href="javascript: void(null)">Summertrain</a></li>
+            </ul>
+        </div>
+
+        <audio id="_musicAudio" src=""></audio>
+    </div>
+</body>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../lab/MusicPlayer/musicPlayer.js"></script>
+<script type="text/javascript">
+    musicUrl = '../asset/music/';
+</script>
+</html>

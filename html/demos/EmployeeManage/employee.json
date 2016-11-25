@@ -1,0 +1,104 @@
+{
+    "employee":
+    [
+        {
+            "num": "10000001",
+            "name": "Jack",
+            "sex": "男",
+            "age": "22",
+            "email": "jack@mm.com",
+            "phone": "00000000001",
+            "salary": "5000"
+        },
+        {
+            "num": "10000002",
+            "name": "Rose",
+            "sex": "女",
+            "age": "21",
+            "email": "rose@mm.com",
+            "phone": "00000000002",
+            "salary": "4500"
+        },
+        {
+            "num": "10000003",
+            "name": "Lee",
+            "sex": "男",
+            "age": "25",
+            "email": "lee@mm.com",
+            "phone": "00000000003",
+            "salary": "6500"
+        },
+        {
+            "num": "10000004",
+            "name": "Mary",
+            "sex": "女",
+            "age": "23",
+            "email": "mary@mm.com",
+            "phone": "00000000003",
+            "salary": "5100"
+        },
+        {
+            "num": "10000005",
+            "name": "Tom",
+            "sex": "男",
+            "age": "27",
+            "email": "tom@mm.com",
+            "phone": "00000000005",
+            "salary": "10500"
+        },
+        {
+            "num": "10000006",
+            "name": "Linda",
+            "sex": "女",
+            "age": "23",
+            "email": "linda@mm.com",
+            "phone": "00000000006",
+            "salary": "6100"
+        },
+        {
+            "num": "10000007",
+            "name": "James",
+            "sex": "男",
+            "age": "26",
+            "email": "james@mm.com",
+            "phone": "00000000007",
+            "salary": "7500"
+        },
+        {
+            "num": "10000008",
+            "name": "Nancy",
+            "sex": "女",
+            "age": "29",
+            "email": "nancy@mm.com",
+            "phone": "00000000008",
+            "salary": "12500"
+        },
+        {
+            "num": "10000009",
+            "name": "Steven",
+            "sex": "男",
+            "age": "28",
+            "email": "steven@mm.com",
+            "phone": "00000000009",
+            "salary": "14500"
+        },
+        {
+            "num": "10000010",
+            "name": "Betty",
+            "sex": "女",
+            "age": "20",
+            "email": "betty@mm.com",
+            "phone": "00000000010",
+            "salary": "3500"
+        },
+        {
+            "num": "10000011",
+            "name": "Taylor",
+            "sex": "女",
+            "age": "20",
+            "email": "taylor@mm.com",
+            "phone": "00000000011",
+            "salary": "3800"
+        }
+    ]
+}

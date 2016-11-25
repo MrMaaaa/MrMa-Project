@@ -6,13 +6,16 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header&footer.css">
     <link rel="stylesheet" type="text/css" href="css/icon-font/iconfont.css">
-    <script src="js/judgeDevice.js"></script>
+    <link rel="stylesheet" type="text/css" href="lab/MusicPlayer/musicPlayer.css">
+    <link rel="stylesheet" type="text/css" href="lab/BallCollision/css/index.css">
+    <script src="js/judgeDevice_index.js"></script>
 </head>
 <body>
     <header class="full clr" id="header"></header>
 
     <div class="title">
         <a class="iconfont icon-fanhui" href="javascript:void(null)"></a>
+
         <ul class="title_list clr">
             <li class="tab_li tab_li1">
                 <a href="javascript:void(null)">我是谁</a>
@@ -21,7 +24,7 @@
             </li>
 
             <li class="tab_li tab_li2">
-                <a href="javascript:void(null)">实验室？！</a>
+                <a href="javascript:void(null)">实验室</a>
 
                 <i class="li_icon iconfont icon-cube"></i>
             </li>
@@ -47,7 +50,49 @@
             </li>
 
             <li class="content_li">
-                <p style="width: 500px; text-align:center; margin: 100px auto 0; font-size: 40px; color: #fff; text-shadow: 0 10px 20px #ddd;">还没有内容，等待更新:-(</p>
+                <div class="center" id="music">
+                    <div id="_musicPlayer">
+                        <div id="_musicCtrl">
+                            <span id="_musicName">Annabelle</span>
+
+                            <div class="_time">
+                                <span id="_nowTime">--:--</span>
+                                /
+                                <span id="_ttlTime">--:--</span>
+                            </div>
+
+                            <span id="_progress">
+                                <i class="iconfont" id="_progressBar"></i>
+                                <i id="_progressLine"></i>
+                            </span>
+
+                            <div class="ctrlGroup">
+                                <i class="iconfont icon-shangyiqu" id="_prev"></i>
+                                <i class="iconfont icon-bofang" id="_play"></i>
+                                <i class="iconfont icon-zanting" id="_pause"></i>
+                                <i class="iconfont icon-xiayiqu" id="_next"></i>
+                            </div>
+                        </div>
+
+                        <div id="_musicLists">
+                            <ul>
+                                <li class="_musicLi active"><a href="javascript: void(null)">Annabelle</a></li>
+                                <li class="_musicLi"><a href="javascript: void(null)">CanonRock</a></li>
+                                <li class="_musicLi"><a href="javascript: void(null)">Fade</a></li>
+                                <li class="_musicLi"><a href="javascript: void(null)">FreeLoop</a></li>
+                                <li class="_musicLi"><a href="javascript: void(null)">Summertrain</a></li>
+                            </ul>
+                        </div>
+
+                        <audio id="_musicAudio" src=""></audio>
+                    </div>
+                </div>
+
+                <div class="center" id="ballCollision">
+                    <button class="startAnimation">Start</button>
+                    <button class="stopAnimation">Stop</button>
+                    <canvas id="ballCollisionCanvas" width="1200px" height="700px"></canvas>
+                </div>
             </li>
 
             <li class="content_li">
@@ -97,6 +142,17 @@
                     <div class="s_lists">
                         <ul class="clr">
                             <li class="s_list">
+                                <a class="s_list_cover" target="_blank" href="html/demos/EmployeeManage/index.html">
+                                    <img class="s_bg" src="img/employeeManage.jpg">
+
+                                    <div class="s_name">
+                                        <p>后台管理系统</p>
+                                        <p class="s_demo_intro">基于BootStrap与AngularJS的员工管理系统（JSON格式数据）</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="s_list">
                                 <a class="s_list_cover" target="_blank" href="html/demos/virtual_fountain/virtual_fountain.html">
                                     <img class="s_bg" src="img/virtual_fountain.jpg">
 
@@ -136,14 +192,28 @@
                             <li class="s_list">
                                 <a class="s_list_content" target="_blank" href="html/articles/a2.html">
                                     <span class="s_classify">【JS】</span>
-                                    <span class="s_introduction">js日记——滚动条的上上下下</span>
+                                    <span class="s_introduction">js备忘录</span>
                                 </a>
                             </li>
 
                             <li class="s_list">
                                 <a class="s_list_content" target="_blank" href="html/articles/a3.html">
                                     <span class="s_classify">【JS】</span>
+                                    <span class="s_introduction">js日记——滚动条的上上下下</span>
+                                </a>
+                            </li>
+
+                            <li class="s_list">
+                                <a class="s_list_content" target="_blank" href="html/articles/a4.html">
+                                    <span class="s_classify">【JS】</span>
                                     <span class="s_introduction">js日记——数组</span>
+                                </a>
+                            </li>
+
+                            <li class="s_list">
+                                <a class="s_list_content" target="_blank" href="html/articles/a5.html">
+                                    <span class="s_classify">【Windows】</span>
+                                    <span class="s_introduction">BUG与DEBUG</span>
                                 </a>
                             </li>
                         </ul>
@@ -152,8 +222,12 @@
             </li>
         </ul>
     </div>
+
+    <footer class="full" id="footer"></footer>
 </body>
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/index.js"></script>
+<script src="lab/MusicPlayer/musicPlayer.js"></script>
+<script src="lab/BallCollision/js/ballCollision.js"></script>
 <script src="js/head_weather.js"></script>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Manage</title>
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body class="container" >
+    <header class="page-header h3">基于BootStrap与AngularJS的员工管理系统（JSON格式数据）</header>
+
+    <div class="row" ng-app="manage">
+        <div class="col-md-2">
+            <div class="panel-group" id="panels">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="#manageList" data-parent="#panels" data-toggle="collapse">员工管理</a>
+                        </h4>
+                    </div>
+
+                    <div class="collapse panel-collapse in" id="manageList">
+                        <ul class="nav nav-pills nav-stacked panel-body" role="tablist">
+                            <li class="presentation active"><a id="btn_employeeInfo" href="#EmployeeInfo" ng-click="employeeinfo">员工信息</a></li>
+                            <li class="presentation"><a id="btn_employeeSearch" href="#EmployeeSearch">员工查找</a></li>
+                            <li class="presentation"><a id="btn_employeeSendMsg" href="#SendMessage">短信群发</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default" id="mainPanel">
+                <div class="panel-heading text-center"><h3 id="typeName"></h3></div>
+
+                <div ng-view></div>
+
+                <nav class="text-center panel-footer" id="pagination">
+                    <ul class="pagination">
+                        <li class="disabled prev noIndex"><a href="javascript:void(null)">&laquo;</a></li>
+                        <li class="disabled next noIndex"><a href="javascript:void(null)">&raquo;</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../../js/jquery-3.1.0.min.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/angular.min.js"></script>
+<script src="../../../js/angular-route.min.js"></script>
+<script src="js/em_controller.js"></script>
+<script src="js/em_module.js"></script>
+</html>

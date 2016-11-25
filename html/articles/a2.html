@@ -2,42 +2,42 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>【JS】js日记——滚动条的上上下下</title>
+    <title>【前端】js备忘录</title>
     <link rel="icon" type="image/x-icon" href="../../img/favicon.png">
     <link rel="stylesheet" type="text/css" href="../../css/header&footer.css">
     <link rel="stylesheet" type="text/css" href="../../css/article.css">
     <link rel="stylesheet" type="text/css" href="../../css/icon-font/iconfont.css">
     <style>
-        .container .content .a2_blk
+        .container .content .a1
         {
-            width: 250px;
-            height: 160px;
-            padding: 10px;
-            position: fixed;
-            top: 30%;
-            left: 50%;
-            background-color: rgba(0, 0, 0, .4);
-            color: #fff;
+            display: block;
+            width: 260px;
+            height: 50px;
+            line-height: 50px;
+            border: 3px solid #000;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 20px;
             overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
-        .container .content .a2_bg
+        #test li
         {
-            width: 0;
-            height: 100%;
-            position: absolute;
-            background-color: rgba(255, 0, 0, .2);
-            top: 0;
-            left: 0;
-        }
-        .container .content .click_to_top_static,
-        .container .content .click_to_top_animate
-        {
+            float: left;
+            width: 100px;
             background-color: #000;
             color: #fff;
-            font-style: normal;
-            padding: 5px 10px;
+            margin-right: 20px;
+            padding-left: 20px;
             cursor: pointer;
+        }
+
+        #test li:hover
+        {
+            background-color: #00FEFF;
+            color: #000;
         }
     </style>
 </head>
@@ -45,56 +45,51 @@
     <header class="full clr" id="header"></header>
 
     <div class="container">
-        <div class="title">js日记——滚动条的上上下下</div>
-        <article class="content">
-            <p>今天做一个随滚动条滚动变化的效果。（语死早）</p>
-            <p>首先固定一个fixed的方块----------------------------></p>
-            <div class="a2_blk">
-                <div class="a2_bg"></div>
-                <p>我是小方块</p>
-                <p>距离顶部（jquery）：<span class="a2_topLength_jq">0</span></p>
-                <p>距离顶部（js1）：<span class="a2_topLength_js1">0</span></p>
-                <p>距离顶部（js2）：<span class="a2_topLength_js2">0</span></p>
-            </div>
-            <p>里边会显示滚动条距离顶部的距离</p>
-            <p>现在开始滚动就会动态显示滚动条距离顶部距离了~</p>
-            <p>除了chrome不支持js1的写法外其他写法均在chrome、firefox、ie9++上测试通过</p>
-            <p>js代码如下：</p>
-            <pre>
-                jq:  $(window).scrollTop();
-                js1: document.documentElement.scrollTop;
-                js2: window.pageYOffset;
-            </pre>
-            <br>
-            <br>
-            <p>知道这个属性就能轻易做出随滚动产生的动态效果了，你向下滚动屏幕再看看这个小方块。。。</p>
-            <p>是不是很容易~</p>
-            <br>
-            <p>到这里我仍然不能知足，能不能获取到元素距离body顶部的距离呢？</p>
-            <p>当然是可以的~</p>
-            <p>比如，元素小方块距离顶部距离是：<span class="a2_bodyLen">0</span></p>
-            <p>不信可以自己用截图工具试试（我写的top:30%所以没法用控制台看）</p>
-            <p>看到这，你肯定也学会了返回顶部的方法了吧？</p>
-            <br>
-            <br>
-            <p><i class="click_to_top_static">点击返回顶部</i></p>
-            <p><i class="click_to_top_animate">点击返回顶部（动画）</i></p>
-            <br>
-            <p href="javascript:void(null)">实现代码：</p>
-            <pre>
-                $('.click_to_top_static').on('click', function() {
-                    $(window).scrollTop(0);
-                });
+        <div class="title">JS 备忘录</div>
 
-                $('.click_to_top_animate').on('click', function() {
-                    $('html, body').animate({'scrollTop': '0'}, 500);
-                });
+        <article class="content">
+            <p>记录关于js的方法</p>
+            <p class="list_title">1. 列表点击alert其index（原生js实现）</p>
+            <p class="indent">效果如下：</p>
+            <ul class="retract clr" id="test">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <p class="indent">代码如下：</p>
+            <pre>
+                var li = document.getElementById('test').getElementsByTagName('li');
+                for(var i = 0; i < li.length; i++) {
+                    //方法一：
+                    li[i].index = i;
+                    li[i].onclick = function() {
+                        alert(this.index + 1);
+                    }
+
+                    //方法二：
+                    li[i].onclick = (function(i) {
+                        return function() {
+                            alert(i + 1);
+                        }
+                    })(i);
+                }
             </pre>
-            <br>
-            <p>注意：以上所有代码均在且只在ie9++上运行通过（其他现代浏览器自然可以运行）</p>
-            <br>
-            <p>完  :-)</p>
-            <br>
+            <p class="list_title">2. 数组去重</p>
+            <p class="retract">原数组为：[1, 2, 3, 4, 4, 4, 4, 4, 'a', 'b', 'c', 'a', 'b', 'c']</p>
+            <p class="retract">清除后为：[1, 2, 3, 4, 'a', 'b', 'c']</p>
+            <p class="indent">代码如下：</p>
+            <pre>
+                function clearRepeat(arr) {
+                    for(var i = 0; i < arr.length - 1; i++) {
+                        for(var j = i + 1; j < arr.length; j++) {
+                            if(arr[j] == arr[i]) {
+                                arr.splice(j, 1);
+                                j--;
+                            }
+                        }
+                    }
+                }
+            </pre>
         </article>
     </div>
 
@@ -105,26 +100,18 @@
 <script>
     $('#header').load('../header.html');
     $('#footer').load('../footer.html');
-    $(function() {
-        var bottomLen = parseInt($(document).height() - $(window).height()); //滚动条一共能滚动的距离
-        $(window).on('scroll', function() {
-            $('.a2_topLength_jq').text(parseInt($(window).scrollTop()));
-            $('.a2_topLength_js1').text(parseInt(document.documentElement.scrollTop));
-            $('.a2_topLength_js2').text(parseInt(window.pageYOffset));
-            $('.container .content .a2_bg').css('width', parseInt(parseInt($('.a2_topLength_jq').text()) * 100 / bottomLen) + '%');
-        });
 
-        $('.a2_bodyLen').text($('.a2_blk')[0].offsetTop);
-
-        $('.click_to_top_static').on('click', function() {
-            $(window).scrollTop(0);
-        });
-
-        $('.click_to_top_animate').on('click', function() {
-            $('html, body').animate({
-                'scrollTop': '0'
-            }, 500);
-        });
-    });
+    var li = document.getElementById('test').getElementsByTagName('li');
+    for(var i = 0; i < li.length; i++) {
+        /*li[i].index = i;
+        li[i].onclick = function() {
+            alert(this.index + 1);
+        }*/
+        li[i].onclick = (function(i) {
+            return function() {
+                alert(i + 1);
+            }
+        })(i);
+    }
 </script>
 </html>

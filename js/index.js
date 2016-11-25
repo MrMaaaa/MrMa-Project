@@ -1,4 +1,5 @@
 $('#header').load('./header.html');
+$('#footer').load('./footer.html');
 $(function() {
     console.log('%c能到这里的，都是同道中人(￣︶￣)↗', 'color: #EF476F;');
     console.log('%c嘿，如果你是一个正在寻求前端工程师的HR，快来与我取得联系吧~', 'color: #EF476F;');
@@ -45,17 +46,14 @@ $(function() {
     }
     else {
         // mobile端
-        console.log('mobile')
         $('.tab_li').click(function() {
             // 点击板块时
-            $(this).siblings().animate({width: 0, height: 0}, 300, 'swing');
+            $(this).siblings().animate({height: 0}, 300, 'swing');
             $(this).animate({height: '150px', lineHeight: '150px'}, 300, 'swing', function() {
                 $('.icon-fanhui').show();
 
                 $('.content .content_lists .content_li').eq($(this).index()).show(); //内容父标签显示，板块对应内容显示
             });
-
-            $(this).find('.li_icon').hide();//板块图标隐藏
 
             $('.title').css('height', 'auto');//父元素高度自动
 
@@ -64,7 +62,7 @@ $(function() {
 
         $('.icon-fanhui').click(function() {
             $(this).hide();//隐藏返回按钮
-            $('.tab_li').animate({width: '100%', height: '25%', lineHeight: '450%'}, 300, 'swing');//板块恢复默认排列
+            $('.tab_li').animate({height: '25%'}, 300, 'swing');//板块恢复默认排列
             $('.title').css('height', '100%');//父元素高度恢复100%
             $('.tab_li .li_icon').show();
             $('.content .content_lists .content_li').hide(); //内容隐藏

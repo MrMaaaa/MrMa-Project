@@ -64,17 +64,14 @@ $(function() {
 
         end = new Date().getMilliseconds();
 
-        if(fpsGap % 10 === 0 && fpsGap !== 0)
-        {
+        if (fpsGap % 10 === 0 && fpsGap !== 0) {
             $('#fps').text(parseInt(1000 / (end - start)));
-            if(fpsGap === 10)
-            {
+            if (fpsGap === 10) {
                 fpsGap = 0;
             }
         }
         start = end;
         fpsGap++;
-        
     }
 
     drawFrame();
