@@ -1,5 +1,5 @@
-<div class="table-responsive typePanel">
-    <table class="table table-bordered table-hover  text-center" ng-controller="employeeSendMsg">
+<div class="table-responsive typePanel" ng-controller="employeeSendMsg">
+    <table class="table table-bordered table-hover text-center" >
         <tr>
             <td>选择</td>
             <td>工号</td>
@@ -8,7 +8,7 @@
             <td>手机</td>
         </tr>
 
-        <tr class="receiverInfo" ng-repeat="data in employeeData | limitTo: 10" on-finish-render-filters value="{{data.num}}">
+        <tr class="receiverInfo" ng-repeat="data in employeeData | limitTo: pageDataSum" on-finish-render-filters value="{{data.num}}" ng-click="addDataToAside($event, data.num)">
             <td><input class="selectReceiver" type="checkbox"></td>
             <td>{{data.num}}</td>
             <td>{{data.name}}</td>
@@ -24,12 +24,20 @@
             </div>
         </div>
 
-        <table class="receiverList table table-hover text-center">
-            <tr>
-                <td>操作</td>
-                <td>姓名</td>
-                <td>工号</td>
-            </tr>
-        </table>
+        <div class="receiverList">
+            <table class="table table-hover text-center">
+                <tr>
+                    <td>操作</td>
+                    <td>姓名</td>
+                    <td>工号</td>
+                </tr>
+
+                <tr ng-repeat="data in selectData">
+                    <td><button class="btn btn-danger btn-sm" type="button" ng-click="deleteDataFromAside(data.num)">删除</button></td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.num}}</td>
+                </tr>
+            </table>
+        </div>
     </aside>
 </div>

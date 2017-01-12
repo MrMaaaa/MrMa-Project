@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>【个人】一句话记事本</title>
+    <base href="../../">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="css/article.css">
+    <link rel="stylesheet" type="text/css" href="css/icon-font/iconfont.css">
+    <style>
+        ol.notes li
+        {
+            list-style-type: decimal;
+            margin: 10px 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="full clr" id="header">
+        <strong class="greet"><a href="index.html" target="_blank">Yesterday you said tomorrow.</a></strong>
+
+        <div id="weather">
+            <span>今日天气：</span>
+            <a id="weather_info" href="html/weather.html" target="_blank" title="点此处查看更多天气信息"></a>
+            <a class="weather_question" href="javascript:void(null)" title="点击显示解决方法">显示有问题？</a>
+            <div class="question_info">
+                <p>1. 检查网络连接是否正常。</p>
+                <p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
+                <p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，因此被某些浏览器阻止，允许阻止即可正常查看。</p>
+                <i class="close iconfont icon-guanbi"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">一句话记事本</div>
+
+        <article class="content">
+            <p class="highlight">一句话记事本，随手记下重点</p>
+
+            <ol class="notes">
+                <li>script标签异步加载：async="true"，IE写法为：defer</li>
+
+                <li>
+                    var e = evt || window.event;//兼容IE写法
+                    <br>
+                    var target = e.target || e.srcElement;//兼容IE写法
+                    <br>
+                    var keyCode = e.keyCode || e.charCode;//兼容火狐写法
+                </li>
+
+                <li>
+                    检测类名是否存在：DOM.classList.contains('class name')
+                    <br>
+                    classList包含的属性/方法有：length, add(), contains(), item()//获取当前DOM元素的索引值对应的类名, remove(), toggle()
+                </li>
+
+                <li>alert(), confirm(), prompt()</li>
+
+                <li>animation: name duration timing-function delay iteration-count direction;</li>
+
+                <li>
+                    transform-origin 只是一个语法糖而已。实际上你总是可以用 translate() 来代替它。
+                    <br>
+                    transform-origin: 200px 300px; === transform: translate(200px, 300px) translate(-200px, -300px);
+                </li>
+
+                <li>rotate(360deg) === rotate(1turn)</li>
+
+                <li>垂直方向的元素存在“外边距重叠”现象，即设置{margin: 10px 0;}后元素垂直距离为10px，解决方法为：设置overflow: hidden; 设置border; 设置padding;</li>
+
+                <li>删除变量正确的方式是：把变量设为null，之后垃圾回收器就会去做他该做的事</li>
+            </ol>
+        </article>
+    </div>
+
+    <footer class="full" id="footer">
+        <span class="temp"><strong>马腾飞</strong>制作并维护，与他联系：<a class="mailto" href="mailto:tenfyma@foxmail.com" title="点击发送邮件">tenfyma@foxmail.com</a></span>
+    </footer>
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script src="js/head_weather.js"></script>
+</html>

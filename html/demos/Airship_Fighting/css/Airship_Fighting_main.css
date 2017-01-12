@@ -8,6 +8,11 @@
 	font-family: Segoe UI, '黑体', 'Microsoft YaHei', monospace;
 }
 
+li
+{
+	list-style: none;
+}
+
 body, html
 {
 	width: 100%;
@@ -36,6 +41,7 @@ body
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
 
 .button
@@ -47,108 +53,214 @@ body
 	border-radius: 5px;
 	font-size: 24px;
 	cursor: pointer;
+	background: #0071ea;
+	color: #9be0ff;
+	margin: 0 auto;
 }
 
-#myCanvas
+.button:hover
 {
-	display: block;
-	float: left;
-	background: #222;
-	vertical-align: top;
+	background: #9be0ff;
+	color: #0071ea;
 }
 
-#start
+.main .gameMain
 {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	z-index: 1;
+	top: 0;
+	z-index: 1000;
 	background: #00abff;
 }
 
-#startButton
+.main .gameMain .title
 {
-	margin: 500px auto 0;
-	background: #0071ea;
-	color: #9be0ff;
+	width: 100%;
+	height: 50%;
 }
 
-#introButton
+.main .gameMain .menu
 {
-	margin: 50px auto 0;
-	background: #0071ea;
-	color: #9be0ff;
+	width: 100%;
+	height: 50%;
 }
 
-#pause
+.main .gameMain .menu .button
+{
+	margin-bottom: 5%;
+}
+
+.main .gameMain .menu .button:last-child
+{
+	margin-bottom: 0;
+}
+
+.main .gameMain .gameSection
+{
+	display: none;
+	width: 90%;
+	height: 90%;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+	background: #00abff;
+	padding: 5%;
+	font-size: 20px;
+	color: #fff;
+	overflow: hidden;
+}
+
+.main .gameMain .gameSection .backButton
+{
+	margin-top: 50px;
+}
+
+.main .gameMain #gameGuide
+{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+
+.main .gameMain #gameGuide .prev,
+.main .gameMain #gameGuide .next
+{
+	width: 32px;
+	height: 64px;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	background-position: 0;
+}
+
+.main .gameMain #gameGuide .prev
+{
+	left: 50px;
+	background: url(../assets/leftArrow.png) no-repeat;
+	background-size: 200% 100%;
+}
+
+.main .gameMain #gameGuide .next
+{
+	right: 50px;
+	background: url(../assets/rightArrow.png) no-repeat;
+	background-size: 200% 100%;
+}
+
+.main .gameMain #gameGuide .prev:hover,
+.main .gameMain #gameGuide .next:hover
+{
+	background-position: 100%;
+}
+
+.main .gameMain #gameGuide #airplaneList
+{
+	width: 21600px;
+	margin-top: 40%;
+	position: absolute;
+	left: -800px;
+}
+
+.main .gameMain #gameGuide .airplane
+{
+	float: left;
+	width: 200px;
+	max-height: 300px;
+	margin: 0 300px;
+}
+
+.main .gameMain #gameGuide .airplane .airplaneName
+{
+	width: 200px;
+	text-align: center;
+	font-size: 28px;
+	text-shadow: 0 10px 15px #000;
+}
+
+.main .gameMain #gameGuide .airplane img
+{
+	width: 100%;
+}
+
+.main .gameLeft
+{
+	display: none;
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+}
+
+.main .gameLeft #myCanvas
+{
+	display: block;
+	width: 600px;
+	height: 100%;
+	float: left;
+	background: #333;
+	vertical-align: top;
+}
+
+.main .gameLeft .pause
 {
 	display: none;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 	position: absolute;
 	z-index: 1;
 	background: rgba(0, 0, 0, .5);
 }
 
-#settingButton
+.main .gameLeft .pause #settingButton
 {
-	margin: 200px auto 0;
-	background: #0071ea;
-	color: #9be0ff;
+	margin-top: 300px;
 }
 
-#restartButton
+.main .gameLeft .pause #restartButton
 {
-	margin: 100px auto 0;
-	background: #0071ea;
-	color: #9be0ff;
+	margin-top: 50px;
 }
 
-#gameInfo
+.main .gameRight
 {
 	display: none;
-	width: 180px;
+	width: 20%;
 	height: 100%;
 	position: absolute;
-	left: 600px;
+	top: 0;
+	right: 0;
+	z-index: 900;
+	background-color: #000;
+}
+
+.main .gameRight #gameInfo
+{
+	width: 100%;
+	height: 100%;
 	color: white;
 	background: #000;
 	font-size: 18px;
-	padding: 0 10px;
+	padding: 10%;
 }
 
-#score,
-#highScore
+.main .gameRight #gameInfo #highScore,
+.main .gameRight #gameInfo #score
 {
 	display: block;
 	font-size: 22px;
 	text-shadow: 0 0 20px #fff;
 }
 
-#gameIntro
-{
-	display: none;
-	width: 90%;
-	height: 90%;
-	position: absolute;
-	z-index: 1;
-	background: #00abff;
-	padding: 5%;
-	font-size: 20px;
-	color: #fff;
-}
-
-#gameIntro_backButton
-{
-	margin: 500px auto 0;
-	background: #0071ea;
-	color: #9be0ff;
-}
-
-#fps
+.main #fps
 {
 	position: fixed;
 	left: 10px;
 	top: 10px;
 	color: #fff;
+	z-index: 10000;
 }

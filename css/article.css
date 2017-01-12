@@ -1,5 +1,3 @@
-
-
 ::selection
 {
     color: #fff;
@@ -109,14 +107,13 @@ body
 {
     font-size: 36px;
     text-align: center;
-    margin-bottom: 100px;
 }
 
 .container .content
 {
     line-height: 2em;
     font-size: 20px;
-    padding: 0 30px;
+    padding: 50px 30px;
 }
 
 .container .content pre,
@@ -127,6 +124,11 @@ body
     font-family: "Consolas" !important;
     line-height: 1.5em;
     white-space: pre-wrap;/* pre标签会设置不换行，需手动修改 */
+}
+
+.container .content > section
+{
+    margin: 10px 0;
 }
 
 .container .content .list_title

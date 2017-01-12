@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>【JS】继承</title>
+    <base href="../../">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="css/article.css">
+    <link rel="stylesheet" type="text/css" href="css/icon-font/iconfont.css">
+    <style>
+        ol.notes li
+        {
+            list-style-type: decimal;
+            margin: 10px 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="full clr" id="header">
+        <strong class="greet"><a href="index.html" target="_blank">Yesterday you said tomorrow.</a></strong>
+
+        <div id="weather">
+            <span>今日天气：</span>
+            <a id="weather_info" href="html/weather.html" target="_blank" title="点此处查看更多天气信息"></a>
+            <a class="weather_question" href="javascript:void(null)" title="点击显示解决方法">显示有问题？</a>
+            <div class="question_info">
+                <p>1. 检查网络连接是否正常。</p>
+                <p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
+                <p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，因此被某些浏览器阻止，允许阻止即可正常查看。</p>
+                <i class="close iconfont icon-guanbi"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">继承</div>
+
+        <article class="content">
+            <p class="highlight">对js中继承的一些理解。</p>
+            <p class="indent">普通的使用sub.prototype = new Super();来实现继承，如果父类构造函数Super中包含参数的话就不能适用，只能使用call/apply来改变Super的this指向sub来实现继承。不过由此实例出的Sub对象s1 instanceof === Super为false，显然不符合继承的本意，因此需要一种完善的方法来实现继承。</p>
+            <code>
+function extend(Child, Parent) {
+    var F = function() {};
+    F.prototype = Parent.prototype;
+    Child.prototype = new F();
+    Child.prototype.constructor = Child;
+}
+            </code>
+            <p>这是一种完备的继承方法，使用例子如下：</p>
+            <code>
+//父类
+function Person(name, age, sex) {
+    this.name = name || 'name';
+    this.age = age || -1;
+    this.sex = sex || 'man';
+}
+
+//父类公共方法
+Person.prototype.say = function() {
+    console.log('I am ' + this.name + ', and I am ' + this.age + ' years old, I am a ' + this.sex + '.');
+}
+
+//子类
+function Man(name, age) {
+    this.name = name;
+    this.age = age;
+    this.sex = 'man';
+}
+
+//继承
+extend(Man, Person);
+//如果子类也需要声明公有变量或方法，则需要在继承后再声明公有变量或方法
+
+//子类Man的一个实例
+var p1 = new Man('jack', 20);
+
+//调用父类方法
+p1.say();
+
+//控制台输出
+I am jack, and I am 20 years old, I am a man.
+            </code>
+            <p>到此构造函数的继承便已经完成，那么非构造函数的继承如何实现呢。</p>
+            <p>这里有一个对象</p>
+            <code>
+Jack = {
+    age: '18'
+}
+            </code>
+            <p>如果我们需要继承自以下对象该如何实现呢</p>
+            <code>
+Tom = {
+    nation: 'USA'
+}
+            </code>
+            <p>可以使用“深拷贝”模式来进行拷贝</p>
+            <code>
+//深拷贝模式
+function deepCopy(child, person) {
+    var child = child || {};
+    for (var i in person) {
+        if (typeof person[i] === 'object') {
+            //为了避免直接赋值时改变子对象内容父对象也会发生改变，在此特殊处理
+            child[i] = (person[i].constructor === Array) ? [] : {};
+
+            deepCopy(person[i], child[i]);
+        } else {
+            child[i] = person[i];
+        }
+    }
+    return child;
+}
+            </code>
+            <p>使用如下：</p>
+            <code>
+var Jack = {
+    age: '18'
+}
+var Tom = {
+    nation: 'USA'
+}
+
+Jack = deepCopy(Tom);
+console.log('I am ' + jack.name + ' and I come from ' + jack.nation + '.');
+//输出I am jack and I come from USA.
+            </code>
+        </article>
+    </div>
+
+    <footer class="full" id="footer">
+        <span class="temp"><strong>马腾飞</strong>制作并维护，与他联系：<a class="mailto" href="mailto:tenfyma@foxmail.com" title="点击发送邮件">tenfyma@foxmail.com</a></span>
+    </footer>
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script src="js/head_weather.js"></script>
+</html>

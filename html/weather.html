@@ -3,26 +3,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Mr.Ma's first website. I have a dream to dream.</title>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	    <meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="icon" type="image/x-icon" href="../img/favicon.png">
 		<link rel="stylesheet" href="../css/header&footer.css">
-		<script src="../js/judgeDevice_weather.js"></script>
+		<link rel="stylesheet" href="../css/weather.css">
 	</head>
 	<body>
-		<header class="full clr">
+		<header class="full clr" id="header">
 			<strong class="greet"><a href="../index.html" target="_blank">Yesterday you said tomorrow.</a></strong>
 		</header>
 
 		<div class="container center clr">
 			<div class="head">
 				<input class="slide_btn" type="button" href="javascript:void(null)" value="更改城市">
-				<abbr class="sup_intro">如果没有找到你所在的城市或有疑问请发邮件到mtf986252757@gmail.com</abbr>
+				<span class="sup_intro">如果没有找到你所在的城市或有疑问请发邮件到<a class="mailto" href="mailto:tenfyma@foxmail.com" title="点击发送邮件">tenfyma@foxmail.com</a></span>
 			</div>
 
 			<div class="weather_main clr">
 				<div class="city_sel">
 					<ul class="clr">
 						<li class="sel_li sel_li1">
-							<span class="city_title">热门城市</span>
+							<span class="city_title">热门</span>
 						</li>
 
 						<li class="sel_li sel_li2">
@@ -57,7 +60,7 @@
 							<span class="city_title">WX</span>
 						</li>
 
-						<li class="sel_li sel_li10">
+						<li class="sel_li sel_li10 sel_li_end">
 							<span class="city_title">YZ</span>
 						</li>
 					</ul>
@@ -128,7 +131,7 @@
 								<li class="city_name">包头</li>
 								<li class="city_name">巴中</li>
 								<li class="city_name">北海</li>
-								<li class="city_name">北京</li>
+								<li class="city_name" id="default_city">北京</li>
 								<li class="city_name">本溪</li>
 								<li class="city_name">滨州</li>
 								<li class="city_name">毫州</li>
@@ -448,7 +451,7 @@
 								<li class="city_name">阳江</li>
 								<li class="city_name">阳泉</li>
 								<li class="city_name">扬州</li>
-								<li class="city_name" id="default_city">烟台</li>
+								<li class="city_name">烟台</li>
 								<li class="city_name">宜宾</li>
 								<li class="city_name">宜昌</li>
 								<li class="city_name">伊春</li>
@@ -498,11 +501,11 @@
 			<div id="city_weather"></div>
 		</div>
 
-        <footer class="full" id="footer"></footer>
+    	<footer class="full" id="footer">
+        	<span class="temp"><strong>马腾飞</strong>制作并维护，与他联系：<a class="mailto" href="mailto:EMAIL" title="点击发送邮件">tenfyma@foxmail.com</a></span>
+    	</footer>
 	</body>
     <script src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
 	<script src="../js/weather.js"></script>
-	<script>
-		$('#footer').load('../html/footer.html');
-	</script>
 </html>

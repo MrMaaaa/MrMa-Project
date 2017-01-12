@@ -1,0 +1,336 @@
+body
+{
+    background-color: #222;
+}
+
+.center
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container
+{
+    padding-top: 50px;
+}
+
+.container > .title
+{
+    color: #fff;
+}
+
+.container > .head
+{
+    display: block;
+
+    margin-top: 50px;
+    padding-left: 10px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #fff;
+
+    font-size: 22px;
+    color: #fff;
+}
+
+.container > .head.head-red
+{
+    border-color: #FF1D00;
+}
+
+.container > .head.head-green
+{
+    border-color: #00FF0F;
+}
+
+.container > .head.head-blue
+{
+    border-color: #00DAFF;
+}
+
+.container .animations .animation
+{
+    float: left;
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+
+    background-color: #fff;
+}
+
+.container .animations .animation .btnAnimation
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 76px;
+    height: 36px;
+    border: 2px solid #fa0;
+
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 第一个动画效果 */
+
+.animation-1 .circle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    margin-top: -63px;
+    margin-left: -63px;
+}
+
+.animation-1 .ball
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin-top: -70px;
+    margin-left: -10px;
+    border-radius: 50%;
+
+    background-color: #00C3FF;
+    transform-origin: 50% 350% 0;
+}
+
+.animation-1 .ball.active
+{
+    animation: circleMove 2s ease-in-out 0s infinite;
+}
+
+@keyframes circleMove
+{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/* 第一个动画效果 end */
+
+/* 第二个动画效果 */
+
+.animation-2 .shape
+{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    display: block;
+
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+
+    background-color: #00E1FF;
+}
+
+.animation-2 .shape.active
+{
+    animation: changeShape 3s ease-in-out 0s infinite;
+}
+
+@keyframes changeShape
+{
+    0% {}
+    50% {
+        transform: translateX(100px) rotateY(360deg);
+    }
+    100% {
+        transform: translateX(0px) rotateY(0deg);
+    }
+}
+
+/* 第二个动画效果 end */
+
+/* 第三个动画效果 */
+
+.animation-3 .bead
+{
+    position: absolute;
+    top: 50px;
+
+    width: 1px;
+    height: 90px;
+
+    background-color: #ddd;
+}
+
+.animation-3 .bead:before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    border-radius: 50%;
+
+    background-color: #00E1FF;
+}
+
+.animation-3 .bead1
+{
+    left: 110px;
+
+    transform-origin: 50% -30%;
+}
+
+.animation-3 .bead1.active
+{
+    animation: lBeadRotate 2s linear 0s infinite;
+}
+
+.animation-3 .bead2 { left: 130px; }
+.animation-3 .bead3 { left: 150px; }
+.animation-3 .bead4 { left: 170px; }
+.animation-3 .bead5
+{
+    left: 190px;
+
+    transform-origin: 50% -30%;
+}
+
+.animation-3 .bead5.active
+{
+    animation: rBeadRotate 2s linear 0s infinite;
+}
+
+@keyframes lBeadRotate
+{
+    0% {}
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(0deg); }
+    100% {}
+}
+
+@keyframes rBeadRotate
+{
+    0% {}
+    50% {transform: rotate(0deg);}
+    75% { transform: rotate(-20deg); }
+    100% {}
+}
+
+/* 第三个动画效果 end */
+
+/* 第四个动画效果 */
+
+.animation-4 .ball
+{
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 140px;
+
+    width: 20px;
+    height: 20px;
+    /*border-radius: 50%;*/
+
+    background-color: #00E1FF;
+}
+
+.animation-4 .ball1.active
+{
+    animation: ballMove1 5s ease 0s infinite;
+}
+
+.animation-4 .ball2.active
+{
+    animation: ballMove2 5s ease 0s infinite;
+}
+
+.animation-4 .ball3.active
+{
+    animation: ballMove3 5s ease 0s infinite;
+}
+
+.animation-4 .ball4.active
+{
+    animation: ballMove4 5s ease 0s infinite;
+}
+
+@keyframes ballMove1
+{
+    0% { transform: rotate(0deg); }
+    20% {
+        transform: translateY(80px) translateY(-50%) rotate(0deg)
+                   translateY(-80px) translateY(50%) rotate(360deg);
+        top: 20px;
+    }
+    80% {
+        transform: translateY(80px) translateY(-50%) rotate(360deg)
+                   translateY(-80px) translateY(50%) rotate(0deg);
+        top: 20px;
+    }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes ballMove2
+{
+    0% {  transform: rotate(0deg); }
+    20% {
+        transform: translateY(-80px) translateY(50%) rotate(0deg)
+                   translateY(80px) translateY(-50%) rotate(360deg);
+        top: 160px;
+    }
+    80% {
+        transform: translateY(-80px) translateY(50%) rotate(360deg)
+                   translateY(80px) translateY(-50%) rotate(0deg);
+        top: 160px;
+    }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes ballMove3
+{
+    0% {  transform: rotate(0deg); }
+    20% {
+        transform: translateX(80px) translateX(-50%) rotate(0deg)
+                   translateX(-80px) translateX(50%) rotate(360deg);
+        left: 70px;
+    }
+    80% {
+        transform: translateX(80px) translateX(-50%) rotate(360deg)
+                   translateX(-80px) translateX(50%) rotate(0deg);
+        left: 70px;
+    }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes ballMove4
+{
+    0% {  transform: rotate(0deg); }
+    20% {
+        transform: translateX(-80px) translateX(50%) rotate(0deg)
+                   translateX(80px) translateX(-50%) rotate(360deg);
+        left: 210px;
+    }
+    80% {
+        transform: translateX(-80px) translateX(50%) rotate(360deg)
+                   translateX(80px) translateX(-50%) rotate(0deg);
+        left: 210px;
+    }
+    100% { transform: translateY(0px); }
+}
+
+/* 第四个动画效果 end */

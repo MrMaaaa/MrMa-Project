@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>A dream to dream</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/section_style.css">
     <link rel="stylesheet" type="text/css" href="css/icon-font/iconfont.css">
-    <link rel="stylesheet" type="text/css" href="lab/MusicPlayer/musicPlayer.css">
-    <link rel="stylesheet" type="text/css" href="lab/BallCollision/css/index.css">
-    <script src="js/judgeDevice_index.js"></script>
 </head>
 <body>
-    <header class="full clr" id="header"></header>
+    <header class="full clr" id="header">
+        <strong class="greet"><a href="index.html" target="_blank">Yesterday you said tomorrow.</a></strong>
+
+        <div id="weather">
+            <span>今日天气：</span>
+            <a id="weather_info" href="html/weather.html" target="_blank" title="点此处查看更多天气信息"></a>
+            <a class="weather_question" href="javascript:void(null)" title="点击显示解决方法">显示有问题？</a>
+            <div class="question_info">
+                <p>1. 检查网络连接是否正常。</p>
+                <p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
+                <p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，因此被某些浏览器阻止，允许阻止即可正常查看。</p>
+                <i class="close iconfont icon-guanbi"></i>
+            </div>
+        </div>
+    </header>
 
     <div class="title">
         <a class="iconfont icon-fanhui" href="javascript:void(null)"></a>
@@ -46,52 +62,49 @@
     <div class="content">
         <ul class="content_lists">
             <li class="content_li">
-                <p style="width: 500px; text-align:center; margin: 100px auto 0; font-size: 40px; color: #fff; text-shadow: 0 10px 20px #ddd;">T_T没来及做，预计下周更新</p>
+                <p style="width: 500px; text-align:center; margin: 100px auto 0; font-size: 40px; color: #fff; text-shadow: 0 10px 20px #ddd;">空空如也~</p>
             </li>
 
             <li class="content_li">
-                <div class="center" id="music">
-                    <div id="_musicPlayer">
-                        <div id="_musicCtrl">
-                            <span id="_musicName">Annabelle</span>
+                <div class="laboratory style-block center">
+                    <p class="s_title">我的实验室</p>
 
-                            <div class="_time">
-                                <span id="_nowTime">--:--</span>
-                                /
-                                <span id="_ttlTime">--:--</span>
-                            </div>
+                    <div class="s_lists">
+                        <ul class="clr">
+                            <li class="s_list list1">
+                                <a class="s_list_cover" target="_blank" href="html/lab/MusicPlayer/index.html">
+                                    <img class="s_bg" src="img/musicPlayer.jpg">
 
-                            <span id="_progress">
-                                <i class="iconfont" id="_progressBar"></i>
-                                <i id="_progressLine"></i>
-                            </span>
+                                    <div class="s_name">
+                                        <p>音乐播放器</p>
+                                        <p class="s_demo_intro">使用audio标签制作web播放器……</p>
+                                    </div>
+                                </a>
+                            </li>
 
-                            <div class="ctrlGroup">
-                                <i class="iconfont icon-shangyiqu" id="_prev"></i>
-                                <i class="iconfont icon-bofang" id="_play"></i>
-                                <i class="iconfont icon-zanting" id="_pause"></i>
-                                <i class="iconfont icon-xiayiqu" id="_next"></i>
-                            </div>
-                        </div>
+                            <li class="s_list list2">
+                                <a class="s_list_cover" target="_blank" href="html/lab/BallCollision/index.html">
+                                    <img class="s_bg" src="img/ballCollision.jpg">
 
-                        <div id="_musicLists">
-                            <ul>
-                                <li class="_musicLi active"><a href="javascript: void(null)">Annabelle</a></li>
-                                <li class="_musicLi"><a href="javascript: void(null)">CanonRock</a></li>
-                                <li class="_musicLi"><a href="javascript: void(null)">Fade</a></li>
-                                <li class="_musicLi"><a href="javascript: void(null)">FreeLoop</a></li>
-                                <li class="_musicLi"><a href="javascript: void(null)">Summertrain</a></li>
-                            </ul>
-                        </div>
+                                    <div class="s_name">
+                                        <p>小球碰撞</p>
+                                        <p class="s_demo_intro">canvas制作碰撞动画及模拟反弹与动量……</p>
+                                    </div>
+                                </a>
+                            </li>
 
-                        <audio id="_musicAudio" src=""></audio>
+                            <li class="s_list list3">
+                                <a class="s_list_cover" target="_blank" href="html/lab/LoadingAnimation/index.html">
+                                    <img class="s_bg" src="img/loadingAnimation.jpg">
+
+                                    <div class="s_name">
+                                        <p>载入动画</p>
+                                        <p class="s_demo_intro">制作一些简单的载入动画……</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="center" id="ballCollision">
-                    <button class="startAnimation">Start</button>
-                    <button class="stopAnimation">Stop</button>
-                    <canvas id="ballCollisionCanvas" width="1200px" height="700px"></canvas>
                 </div>
             </li>
 
@@ -183,38 +196,52 @@
                     <div class="s_lists">
                         <ul class="clr">
                             <li class="s_list">
-                                <a class="s_list_content" target="_blank" href="html/articles/a1.html">
+                                <div class="s_list_content">
+                                    <span class="s_classify">【个人】</span>
+                                    <a class="s_introduction" target="_blank" href="html/articles/a0.html">一句话记事本</a>
+                                </div>
+                            </li>
+
+                            <li class="s_list">
+                                <div class="s_list_content">
                                     <span class="s_classify">【CSS】</span>
-                                    <span class="s_introduction">css备忘录</span>
-                                </a>
+                                    <a class="s_introduction" target="_blank" href="html/articles/a1.html">css备忘录</a>
+                                </div>
                             </li>
 
                             <li class="s_list">
-                                <a class="s_list_content" target="_blank" href="html/articles/a2.html">
+                                <div class="s_list_content">
                                     <span class="s_classify">【JS】</span>
-                                    <span class="s_introduction">js备忘录</span>
-                                </a>
+                                    <a class="s_introduction"  target="_blank" href="html/articles/a2.html">js备忘录</a>
+                                </div>
                             </li>
 
                             <li class="s_list">
-                                <a class="s_list_content" target="_blank" href="html/articles/a3.html">
+                                <div class="s_list_content">
                                     <span class="s_classify">【JS】</span>
-                                    <span class="s_introduction">js日记——滚动条的上上下下</span>
-                                </a>
+                                    <a class="s_introduction" target="_blank" href="html/articles/a3.html">js日记——滚动条的上上下下</a>
+                                </div>
                             </li>
 
                             <li class="s_list">
-                                <a class="s_list_content" target="_blank" href="html/articles/a4.html">
+                                <div class="s_list_content">
                                     <span class="s_classify">【JS】</span>
-                                    <span class="s_introduction">js日记——数组</span>
-                                </a>
+                                    <a class="s_introduction" target="_blank" href="html/articles/a4.html">js日记——数组</a>
+                                </div>
                             </li>
 
                             <li class="s_list">
-                                <a class="s_list_content" target="_blank" href="html/articles/a5.html">
+                                <div class="s_list_content">
                                     <span class="s_classify">【Windows】</span>
-                                    <span class="s_introduction">BUG与DEBUG</span>
-                                </a>
+                                    <a class="s_introduction" target="_blank" href="html/articles/a5.html">BUG与DEBUG</a>
+                                </div>
+                            </li>
+
+                            <li class="s_list">
+                                <div class="s_list_content">
+                                    <span class="s_classify">【JS】</span>
+                                    <a class="s_introduction" target="_blank" href="html/articles/a6.html">继承</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -223,11 +250,12 @@
         </ul>
     </div>
 
-    <footer class="full" id="footer"></footer>
+    <footer class="full" id="footer">
+        <span class="temp"><strong>马腾飞</strong>制作并维护，与他联系：<a class="mailto" href="mailto:tenfyma@foxmail.com" title="点击发送邮件">tenfyma@foxmail.com</a></span>
+    </footer>
 </body>
 <script src="js/jquery-3.1.0.min.js"></script>
+<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
 <script src="js/index.js"></script>
-<script src="lab/MusicPlayer/musicPlayer.js"></script>
-<script src="lab/BallCollision/js/ballCollision.js"></script>
 <script src="js/head_weather.js"></script>
 </html>

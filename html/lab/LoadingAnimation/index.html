@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading Animation</title>
+    <base href="../../../">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="css/icon-font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="html/lab/LoadingAnimation/index.css">
+</head>
+<body>
+    <header class="full clr" id="header">
+        <strong class="greet"><a href="index.html" target="_blank">Yesterday you said tomorrow.</a></strong>
+
+        <div id="weather">
+            <span>今日天气：</span>
+            <a id="weather_info" href="html/weather.html" target="_blank" title="点此处查看更多天气信息"></a>
+            <a class="weather_question" href="javascript:void(null)" title="点击显示解决方法">显示有问题？</a>
+            <div class="question_info">
+                <p>1. 检查网络连接是否正常。</p>
+                <p>2. 请在浏览器链接窗口右侧选择“允许加载不安全的脚本”。</p>
+                <p>3. 由于该功能调用气象台数据，被浏览器识别为跨域，因此被某些浏览器阻止，允许阻止即可正常查看。</p>
+                <i class="close iconfont icon-guanbi"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container center" id="main">
+        <h1 class="title">尝试制作一些载入动画</h1>
+
+        <span class="head head-red">CSS3动画</span>
+        <div class="animations clr">
+            <div class="animation animation-1">
+                <button class="btnAnimation toggleAnimation1" type="button">run</button>
+
+                <i class="circle"></i>
+                <i class="ball"></i>
+            </div>
+
+            <div class="animation animation-2">
+                <button class="btnAnimation toggleAnimation2" type="button">run</button>
+
+                <i class="shape"></i>
+            </div>
+
+            <div class="animation animation-3">
+                <button class="btnAnimation toggleAnimation3" type="button">run</button>
+
+                <i class="bead bead1"></i>
+                <i class="bead bead2"></i>
+                <i class="bead bead3"></i>
+                <i class="bead bead4"></i>
+                <i class="bead bead5"></i>
+            </div>
+
+            <div class="animation animation-4">
+                <button class="btnAnimation toggleAnimation4" type="button">run</button>
+
+                <i class="ball ball1"></i>
+                <i class="ball ball2"></i>
+                <i class="ball ball3"></i>
+                <i class="ball ball4"></i>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <footer class="full" id="footer">
+        <span class="temp"><strong>马腾飞</strong>制作并维护，与他联系：<a class="mailto" href="mailto:tenfyma@foxmail.com" title="点击发送邮件">tenfyma@foxmail.com</a></span>
+    </footer>
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script src="js/head_weather.js"></script>
+<script src="html/lab/LoadingAnimation/index.js"></script>
+</html>

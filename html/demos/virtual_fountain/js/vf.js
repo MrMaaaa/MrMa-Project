@@ -27,9 +27,10 @@ $(function() {
     var balls = [];
     var numBalls = 300,
         gravity = 0.5; //一次喷出300个水滴（球），其重力为0.5
-    for (var ball, i = 0; i < numBalls; i++) //给每个球赋予同样的坐标，随机的颜色
-    {
-        ball = new Circle(0, 0, 2);
+
+    //给每个球赋予同样的坐标，随机的颜色
+    for (var ball, i = 0; i < numBalls; i++) {
+        ball = new mShape.Circle(0, 0, 2);
         ball.x = canvas[0].width / 2;
         ball.y = canvas[0].height;
         //ball.color = "#" + (Math.random() * 0xffffff).toString(16).replace(".","").slice(0, 6);//随机生成16进制的6位数字模拟随机颜色
@@ -53,7 +54,7 @@ $(function() {
             ball.vx = Math.random() * 4 - 2;
             ball.vy = Math.random() * -10 - 20;
         }
-        ball.Draw(1);
+        ball.draw(1);
     }
 
     function drawFrame() {

@@ -10,7 +10,7 @@
             <td>月薪</td>
         </tr>
 
-        <tr ng-repeat="data in employeeData | limitTo: 10">
+        <tr ng-repeat="data in employeeData | limitTo: pageDataSum">
             <td>{{data.num}}</td>
             <td>{{data.name}}</td>
             <td>{{data.sex}}</td>

@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*全局声明部分*/
+/* 全局声明部分 */
 
 *
 {
@@ -30,81 +30,49 @@ li
     visibility: hidden;
 }
 
-.center
-{
-    width: 1200px;
-    min-width: 1200px;
-    margin: 0 auto;
-}
-
 .full
 {
     width: 100%;
-    min-width: 1200px;
 }
 
-/*页面样式部分*/
+/* 页面样式部分 */
 
-/*header*/
+/* header */
 
-header
+#header
 {
     width: 100%;
-    height: 50px;
+    height: 40px;
+    line-height: 40px;
     background-color: rgba(0, 0, 0, .5);
-    /* -webkit-box-shadow: 0 0 10px #fff;
-    -moz-box-shadow: 0 0 10px #fff;
-    box-shadow: 0 0 10px #fff; */
     z-index: 100;
     position: fixed;
     top: 0;
 }
 
-header .greet
+#header .greet
 {
     float: left;
     width: 300px;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
     color: #fff;
     margin-left: 20px;
     font-size: 20px;
 }
 
-header .greet a
+#header .greet a
 {
     color: #fff;
     text-decoration: none;
-}
-
-header nav
-{
-    float: left;
-}
-
-header nav .nav_li
-{
-    float: left;
-    line-height: 50px;
-}
-
-header nav .nav_li a
-{
-    display: block;
-    padding: 0 20px;
-    color: #fff;
-    font-size: 20px;
 }
 
 #weather
 {
     float: right;
     width: 400px;
-    height: 50px;
-    line-height: 50px;
     color: #fff;
     position: relative;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 #weather_info
@@ -112,20 +80,19 @@ header nav .nav_li a
     color: #fff;
 }
 
-header .weather_question
+#header .weather_question
 {
     display: inline-block;
-    height: 50px;
+    vertical-align: top;
     font-size: 12px;
     color: #fff;
     position: relative;
 }
 
-header #weather .question_info
+#header #weather .question_info
 {
     display: none;
     width: 310px;
-    height: auto;
     line-height: 2em;
     padding: 20px;
     background: rgba(0, 0, 0, .5);
@@ -137,14 +104,14 @@ header #weather .question_info
     cursor: text;
 }
 
-header #weather .question_info .close
+#header #weather .question_info .close
 {
     display: block;
     width: 32px;
     height: 32px;
     line-height: 32px;
     text-align: center;
-    text-decoration: none;
+    cursor: pointer;
     position: absolute;
     right: 5px;
     bottom: 5px;
@@ -152,49 +119,85 @@ header #weather .question_info .close
     transition: transform .3s ease;
 }
 
-header #weather .question_info .close:hover
+#header #weather .question_info .close:hover
 {
     transform: rotate(180deg);
     transition: transform .3s ease;
 }
 
-/*header end*/
-
-
-/* header mini */
-
-@media only screen and (max-width: 640px)
-{
-    .full,
-    .main,
-    .center
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+    #header .greet
     {
-        width: 100%;
-        min-width: 0;
-    }
-
-    header
-    {
-        height: auto;
+        width: auto;
     }
 
     #weather
     {
-        position: static;
-        width: 90%;
-        height: auto;
-        padding: 0 5%;
-        line-height: 50px;
+        width: auto;
     }
 }
 
+@media only screen and (min-width: 465px) and (max-width: 640px) {
+    #header
+    {
+        height: 40px;
+        line-height: 40px;
+    }
 
-/* header mini end */
+    #header .greet
+    {
+        width: auto;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    #weather
+    {
+        width: auto;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    #header .weather_question
+    {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    #header
+    {
+        height: 40px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    #header .greet
+    {
+        width: auto;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    #weather
+    {
+        width: auto;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    #header .weather_question
+    {
+        font-size: 8px;
+    }
+}
+
+/* header end */
 
 
-/*footer*/
+/* footer */
 
-footer
+#footer
 {
     height: 40px;
     line-height: 40px;
@@ -204,7 +207,7 @@ footer
     background-color: rgba(0, 0, 0, .5);
 }
 
-footer .temp
+#footer .temp
 {
     display: block;
     color: #fff;
@@ -212,4 +215,16 @@ footer .temp
     margin-left: 30px;
 }
 
-/*footer end*/
+#footer .temp .mailto
+{
+    color: #fff;
+}
+
+@media only screen and (max-width: 365px) {
+    #footer
+    {
+        line-height: 20px;
+    }
+}
+
+/* footer end */

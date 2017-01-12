@@ -62,10 +62,17 @@
     border: 1px solid #ddd;
 }
 
-#sendMsgSet > div.panel
+#sendMsgSet > .panel
 {
     margin-bottom: 0;
     border-bottom: none;
+}
+
+#sendMsgSet > .receiverList
+{
+    height: 600px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #AFAFAF;
 }
 
 #pagination

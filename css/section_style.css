@@ -22,16 +22,12 @@
 {
     float: left;
     display: block;
-    width: 32%;
+    width: 360px;
     height: 300px;
-    margin-right: 2%;
+    margin-left: 20px;
+    margin-right: 20px;
     position: relative;
     margin-bottom: 60px;
-}
-
-.style-block .s_lists .s_list:nth-child(3n + 3)
-{
-    margin-right: 0;
 }
 
 .style-block .s_lists .s_list .s_list_cover
@@ -84,31 +80,13 @@
     background-color: #fff;
 }
 
-.style-inline .s_title
-{
-    height: 30px;
-    line-height: 30px;
-    font-size: 30px;
-    margin: 20px 0;
-    padding-left: 20px;
-    color: #fff;
-    border-left: 5px solid #FF4643;
-}
-
 .style-inline .s_lists .s_list
 {
     width: 100%;
     height: 70px;
     line-height: 70px;
-    border-bottom: 1px solid #d2d2d2;
     background-color: #fff;
-    margin: 50px 0;
-}
-
-.style-inline .s_lists .s_list:hover > .s_list_content
-{
-    color: #00DAE5;
-    text-shadow: 0 3px 20px #00DAE5;
+    border-bottom: 1px solid #000;
 }
 
 .style-inline .s_lists .s_list .s_list_content
@@ -117,29 +95,33 @@
     width: 100%;
     height: 100%;
     font-size: 18px;
-    color: #000;
+    color: #333;
 }
 
 .style-inline .s_lists .s_list .s_list_content .s_classify
 {
     display: block;
+    width: 25%;
+    padding: 0 2.5%;
     float: left;
-    width: 100px;
-    padding: 0 20px;
     text-align: center;
 }
 
 .style-inline .s_lists .s_list .s_list_content .s_introduction
 {
     display: block;
+    width: 70%;
+    height: 100%;
     float: left;
-    margin-left: 20px;
+    color: #333;
+    transition: all .3s;
 }
 
-.style-inline .s_lists .s_list:hover .s_list_content .s_classify,
-.style-inline .s_lists .s_list:hover .s_list_content .s_introduction
+.style-inline .s_lists .s_list .s_list_content .s_introduction:hover
 {
-    text-decoration: underline;
+    width: 68%;
+    padding-left: 2%;
+    transition: all .3s;
 }
 
 /* 行级目录排版 end */
