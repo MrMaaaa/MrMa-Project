@@ -1,0 +1,141 @@
+#container
+{
+    padding-top: 20px;
+}
+
+#container .reg-form
+{
+    width: 320px;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 40px;
+    border: 2px solid #DDD;
+    border-radius: 5px;
+
+    font-size: 18px;
+}
+
+#container .icon-success
+{
+    display: inline-block;
+    position: absolute;
+    right: -20px;
+    top: 7px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    background-color: #0f0;
+    font-size: 0;
+}
+
+#container .icon-success::before
+{
+    content: '√';
+    position: absolute;
+    left: 2px;
+    top: -2px;
+
+    display: block;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+#container .icon-fail
+{
+    display: inline-block;
+    position: absolute;
+    right: -20px;
+    top: 7px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    background-color: #f00;
+    font-size: 0;
+}
+
+#container .icon-fail::before
+{
+    content: '×';
+    position: absolute;
+    left: 2px;
+    top: -4px;
+
+    display: block;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+#container .reg-form .reg-welcome
+{
+    color: #00B0FF;
+    font-size: 20px;
+}
+
+#container .reg-form .reg-split
+{
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+
+    background-color: #ddd;
+}
+
+#container .reg-form .reg-line:not(:first-child)
+{
+    position: relative;
+
+    margin-top: 20px;
+}
+
+#container .reg-form .reg-info
+{
+    display: inline-block;
+
+    width: 100px;
+    padding-right: 10px;
+
+    text-align: left;
+}
+
+#container .reg-form .reg-input
+{
+    display: inline-block;
+
+    width: 200px;
+    height: 30px;
+
+    border: 1px solid #A8A8A8;
+}
+
+#container .reg-form .reg-result
+{
+    height: 20px;
+}
+
+#container .reg-form .reg-result .reg-result-error
+{
+    color: #f00;
+}
+
+#container .reg-form .reg-btn-reg
+{
+    display: block;
+
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: #00CDFF;
+    color: #fff;
+}
+
+#container .reg-form .reg-btn-reg:hover
+{
+    background-color: #00D7FF;
+}

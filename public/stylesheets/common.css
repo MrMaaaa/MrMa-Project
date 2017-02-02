@@ -1,0 +1,158 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+li
+{
+    list-style: none;
+}
+
+body
+{
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+}
+
+.center
+{
+    width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+
+.full
+{
+    width: 100%;
+}
+
+.clr::before,
+.clr::after
+{
+    content: '';
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    clear: both;
+    visibility: hidden;
+}
+
+.hide
+{
+    display: none;
+}
+
+.btn
+{
+    width: 100px;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.btn:hover
+{
+    background-color: #ddd;
+}
+
+/* header */
+
+#header
+{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+
+    background-color: #00CDFF;
+    box-shadow: 0 5px 20px 1px #C4C4C4;
+}
+
+#header .back-home
+{
+    float: left;
+
+    display: block;
+    height: 100%;
+    padding: 0 10px;
+
+    font-size: 18px;
+    color: #fff;
+    background-color: #008CFF;
+}
+
+#header .back-home:hover
+{
+    color: #000;
+}
+
+#header .header-nav
+{
+    float: right;
+}
+
+#header .header-nav .welcome
+{
+    float: left;
+    display: inline-block;
+
+    margin-right: 50px;
+}
+
+#header .header-nav .welcome .username
+{
+    font-weight: bolder;
+}
+
+#header .header-nav .nav-list
+{
+    float: left;
+}
+
+#header .header-nav .nav-list li
+{
+    float: left;
+
+    padding: 0 10px;
+
+    color: #fff;
+    overflow: hidden;
+}
+
+#header .header-nav .nav-list li a
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+#header .header-nav .nav-list li:not(.split):hover
+{
+    background-color: #fff;
+}
+
+#header .header-nav .nav-list li:not(.split):hover a
+{
+    color: #00CDFF;
+}
+
+#header .header-nav .nav-list li.split
+{
+    padding: 0;
+
+    color: #ddd;
+    cursor: default;
+}
+
+/* header end */

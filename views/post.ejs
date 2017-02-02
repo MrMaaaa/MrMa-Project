@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+</head>
+<body>
+    <%- include header %>
+
+    <div class="center" id="container">
+        <form class="post-form" method="post" action="/post">
+            <div class="title">
+                <span class="intro">标题：</span>
+                <input type="text" name="title" autofocus>
+            </div>
+
+            <div class="main">
+                <span class="intro">正文：</span>
+                <textarea name="post" rows="30" cols="100"></textarea><br>
+            </div>
+
+            <button class="post-btn" type="submit">发表</button>
+        </form>
+    </div>
+
+    <%- include footer %>
+</body>
+</html>

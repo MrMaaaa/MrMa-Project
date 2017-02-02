@@ -1,0 +1,81 @@
+#container
+{
+    padding-top: 20px;
+}
+
+#container .login-form
+{
+    width: 320px;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 40px;
+    border: 2px solid #DDD;
+    border-radius: 5px;
+
+    font-size: 18px;
+}
+
+#container .login-form .login-welcome
+{
+    color: #00B0FF;
+    font-size: 20px;
+}
+
+#container .login-form .login-split
+{
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+
+    background-color: #ddd;
+}
+
+#container .login-form .login-line:not(:first-child)
+{
+    margin-top: 20px;
+}
+
+#container .login-form .login-info
+{
+    display: inline-block;
+
+    width: 80px;
+    padding-right: 10px;
+
+    text-align: left;
+}
+
+#container .login-form .login-input
+{
+    display: inline-block;
+
+    width: 220px;
+    height: 30px;
+}
+
+#container .login-form .login-result
+{
+    height: 20px;
+}
+
+#container .login-form .login-result .login-result-error
+{
+    color: #f00;
+}
+
+#container .login-form .login-btn-login
+{
+    display: block;
+
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: #00CDFF;
+    color: #fff;
+}
+
+#container .login-form .login-btn-login:hover
+{
+    background-color: #00D7FF;
+}

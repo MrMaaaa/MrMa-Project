@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+</head>
+<body>
+    <%- include header %>
+
+    <div class="center" id="container">
+        <form class="reg-form" id="reg_form" method="post" action="/reg">
+            <p class="reg-welcome">欢迎注册</p>
+            <div class="reg-split"></div>
+
+            <div class="reg-line">
+                <span class="reg-info">用户名：</span>
+                <input class="reg-input reg-username" type="text" name="username" autofocus>
+                <div class="username-icon-success"></div>
+            </div>
+
+            <div class="reg-line">
+                <span class="reg-info">密码：</span>
+                <input class="reg-input reg-password" type="password" name="password">
+            </div>
+
+            <div class="reg-line">
+                <span class="reg-info">确认密码：</span>
+                <input class="reg-input reg-password-repeat" type="password" name="password-repeat">
+            </div>
+
+            <div class="reg-line">
+                <span class="reg-info">邮箱：</span>
+                <input class="reg-input reg-email" type="email" name="email">
+            </div>
+
+            <div class="reg-line reg-result">
+                <span class="reg-result-error">
+                    <% if (error) { %>
+                    <%= error %>
+                    <% } %>
+                </span>
+            </div>
+
+            <div class="reg-line">
+                <input class="btn reg-btn-reg" type="submit" value="注册">
+            </div>
+        </form>
+    </div>
+
+    <%- include footer %>
+</body>
+<script src="/javascripts/jquery-3.1.0.min.js"></script>
+<script src="/javascripts/reg.js"></script>
+</html>

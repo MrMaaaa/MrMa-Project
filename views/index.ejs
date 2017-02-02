@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+    <%- include header %>
+
+    <div class="center" id="container">
+        <% if(posts) { %>
+            <% posts.forEach(function (post, index) { %>
+                <div class="blog-contain">
+                    <div class="title"><%= post.title %></div>
+
+                    <div class="info">
+                        <a class="author" href="javascript:void(null)" title="点击进入个人空间"><%= post.name %></a>
+                        <span class="split">|</span>
+                        <span class="time"><%= post.time %></span>
+                    </div>
+
+                    <div class="post">
+                        <%- post.post %>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <h2 class="welcome">欢迎来到M-blog.</h2>
+        <% } %>
+    </div>
+
+    <%- include footer %>
+</body>
+</html>

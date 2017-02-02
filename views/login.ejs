@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+    <%- include header %>
+
+    <div class="center" id="container">
+        <form class="login-form" id="login_form" method="post" action="/login">
+            <p class="login-welcome">欢迎登录</p>
+            <div class="login-split"></div>
+
+            <div class="login-line">
+                <span class="login-info">用户名：</span>
+                <input class="login-input" type="text" name="username" autofocus>
+            </div>
+
+            <div class="login-line">
+                <span class="login-info">密码：</span>
+                <input class="login-input" type="password" name="password">
+            </div>
+
+            <div class="login-line login-result">
+                <span class="login-result-error">
+                    <% if (error) { %>
+                    <%= error %>
+                    <% } %>
+                </span>
+            </div>
+
+            <div class="login-line">
+                <input class="btn login-btn-login" type="submit" value="登录">
+            </div>
+        </form>
+    </div>
+
+    <%- include footer %>
+</body>
+<script>
+    var errDom = document.querySelector('#login_form .login-result-error');
+    document.querySelector('#login_form .login-btn-login').onclick = function() {
+        return checkLogin(document.querySelector('#login_form'), errDom);
+    };
+
+    //检查用户名或密码是否为空
+    function checkLogin(form, errDom) {
+        if (form.username.value === '' || form.password.value === '') {
+            errDom.innerText = '请输入账号或密码！';
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+</html>

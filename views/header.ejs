@@ -1,0 +1,26 @@
+<header id="header">
+    <div class="center">
+        <a class="back-home" href="/">M-Blog</a>
+
+        <nav class="header-nav clr">
+            <% if (user) { %>
+                <div class="welcome">
+                    欢迎你，
+                    <span class="username"><%= user.username %></span>
+                </div>
+            <% } %>
+
+            <ul class="nav-list clr">
+                <% if (user) { %>
+                    <li><a title="写博客" href="/post">写博客</a></li>
+                    <li class="split">|</li>
+                    <li><a title="注销" href="/logout">注销</a></li>
+                <% } else { %>
+                    <li><a title="登录" href="/login">登录</a></li>
+                    <li class="split">|</li>
+                    <li><a title="注册" href="/reg">注册</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </div>
+</header>
